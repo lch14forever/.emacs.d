@@ -1,7 +1,4 @@
-;;Org mode
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(add-to-list 'load-path "~/.emacs.d/mypackages/")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -65,7 +62,6 @@
 ;;clojure and nrepl mode
 (setq auto-mode-alist (cons '("\\.clj$" . clojure-mode) auto-mode-alist))
 ;;paredit
-   (add-to-list 'load-path "~/.emacs.d/paredit/")
    (autoload 'enable-paredit-mode "paredit"
      "Turn on pseudo-structural editing of Lisp code."
      t)
@@ -79,3 +75,22 @@
     (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
     (add-hook 'clojure-test-mode-hook          #'enable-paredit-mode)
     (add-hook 'nrepl-mode-hook           #'enable-paredit-mode)
+
+;;ibus
+(require 'ibus)
+  (global-set-key "\C-ci" 'ibus-mode)
+
+;;Org mode
+ (global-set-key "\C-cl" 'org-store-link)
+ (global-set-key "\C-ca" 'org-agenda)
+ (global-set-key "\C-cb" 'org-iswitchb)
+ (setq org-log-done 'time)
+
+ ;;syntax highlighting within Org 
+ (setq org-src-fontify-natively t)
+ (require 'org-latex)
+ (require 'org-special-blocks) ;; #+begin_foo #+end_foo
+
+ (setq org-latex-pdf-process '("xelatex  -interaction nonstopmode -output-directory %o %f"
+			       "xelatex  -interaction nonstopmode -output-directory %o %f"
+			       "xelatex  -interaction nonstopmode -output-directory %o %f"))
