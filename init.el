@@ -1,5 +1,9 @@
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
 
+(setq user-mail-address "lch14forever@gmail.com")
+(setq user-full-name "Li Chenhao")
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -91,6 +95,96 @@
  (require 'org-latex)
  (require 'org-special-blocks) ;; #+begin_foo #+end_foo
 
- (setq org-latex-pdf-process '("xelatex  -interaction nonstopmode -output-directory %o %f"
-			       "xelatex  -interaction nonstopmode -output-directory %o %f"
-			       "xelatex  -interaction nonstopmode -output-directory %o %f"))
+;;babel to evaluate the code
+ (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (R . t)
+     (dot . t)
+     (ruby . t)
+     (python . t) 
+     (sh . t)
+     (perl . t)
+     (latex . t)
+     (clojure . t) 
+     )
+ )
+
+;;do not ask before evaluation
+(setq org-confirm-babel-evaluate nil)
+
+;;to use minted package
+(setq org-latex-listings 'minted)
+(setq org-latex-minted-options
+      '(("linenos" "true") 
+        ("bgcolor" "bg")  ;; this is dependent on the color being defined
+        ("stepnumber" "1")
+        ("numbersep" "10pt")
+        )
+      )
+(setq my-org-minted-config (concat "%% minted package configuration settings\n"
+                                   "\\usepackage{minted}\n"
+                                   "\\definecolor{bg}{rgb}{0.8,0.8,0.8}\n" 
+                                   "\\usemintedstyle{emacs}\n"
+                                   "\\usepackage{upquote}\n"
+                                   "\\AtBeginDocument{%\n"
+                                   "\\def\\PYZsq{\\textquotesingle}%\n"
+                                   "}\n"
+                                    ))
+
+;;#+LATEX_CMD: pdflatex/xelatex/lualatex
+(defun my-org-tex-cmd ()
+  "set the correct type of LaTeX process to run for the org buffer"
+  (let ((case-fold-search t))
+    (if (string-match  "^#\\+LATEX_CMD:\s+\\(\\w+\\)"   
+                       (buffer-substring-no-properties (point-min) (point-max)))
+        (downcase (match-string 1 (buffer-substring-no-properties (point-min) (point-max))))
+      "xelatex"
+    ))
+  )
+
+(defun set-org-latex-pdf-process (backend)
+  "When exporting from .org with latex, automatically run latex,
+   pdflatex, or xelatex as appropriate, using latexmk."
+  (setq org-latex-pdf-process
+        (list (concat "latexmk -pdflatex='" 
+                      (my-org-tex-cmd)
+                      " -shell-escape -interaction nonstopmode'  -pdf -f  %f" ))))
+(add-hook 'org-export-before-parsing-hook 'set-org-latex-pdf-process)
+
+;; (setq org-latex-pdf-process '("xelatex  -interaction nonstopmode -output-directory %o %f"
+;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"
+;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"))
+
+
+(defun my-auto-tex-packages (backend)
+  "Automatically set packages to include for different LaTeX engines"
+  (let ((my-org-export-latex-packages-alist 
+         `(("pdflatex" . (("AUTO" "inputenc" t)
+                          ("T1" "fontenc" t)
+                          ("" "textcomp" t)
+                          ("" "varioref"  nil)
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                          ,my-org-minted-config))
+           ("xelatex" . (("" "url" t)
+                         ("" "fontspec" t)
+                         ("" "xltxtra" t)
+                         ("" "xunicode" t)
+                          ("" "varioref"  nil)
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                         ,my-org-minted-config ))
+           ("lualatex" . (("" "url" t)
+                       ("" "fontspec" t)
+                          ("" "varioref"  nil)
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                       ,my-org-minted-config ))
+           ))
+        (which-tex (my-org-tex-cmd)))
+    (if (car (assoc which-tex my-org-export-latex-packages-alist))
+        (setq org-latex-packages-alist 
+              (cdr (assoc which-tex my-org-export-latex-packages-alist)))
+      (warn "no packages")
+      )
+    )
+  )
+(add-hook 'org-export-before-parsing-hook 'my-auto-tex-packages 'append)
