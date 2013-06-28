@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
 
-(setq user-mail-address "lch14forever@gmail.com")
-(setq user-full-name "Li Chenhao")
+(setq user-mail-address "lch14forever@gmail.com"
+      user-full-name "Li Chenhao")
 
 
 (custom-set-variables
@@ -10,7 +10,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (deeper-blue))))
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(font-use-system-font t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -57,14 +59,38 @@
                                      ;; foreach, while, etc...
 ;;flymake
 (require 'flymake)
-(global-set-key [f3] 'flymake-mode)
-(global-set-key [f4] 'flymake-display-err-menu-for-current-line)
-(global-set-key [f5] 'flymake-goto-next-error)
-;;(add-hook 'find-file-hook 'flymake-find-file-hook) ;;auto-start
+;;(global-set-key [f3] 'flymake-mode)
+(global-set-key [f3] 'flymake-display-err-menu-for-current-line)
+(global-set-key [f4] 'flymake-goto-next-error)
+(add-hook 'cperl-mode-hook 'flymake-find-file-hook) ;;auto-start
+
+;;perl auto-complete
+(add-hook 'cperl-mode-hook
+          (lambda()
+            (require 'perl-completion)
+            (perl-completion-mode t)))
+(add-hook  'cperl-mode-hook
+           (lambda ()
+             (when (require 'auto-complete nil t) ; no error whatever auto-complete.el is not installed.
+               (auto-complete-mode t)
+               (make-variable-buffer-local 'ac-sources)
+               (setq ac-sources
+                     '(ac-source-perl-completion)))))
 
 
 ;;clojure and nrepl mode
 (setq auto-mode-alist (cons '("\\.clj$" . clojure-mode) auto-mode-alist))
+
+;; show parens
+
+(show-paren-mode t)
+
+;; (defun turn-on-paren-mode ()
+;; "turn on paren-mode without any paremeters, can be used as a hook"
+;;  (show-paren-mode t) 
+;; )
+;;(add-hook 'lisp-mode-hook 'turn-on-paren-mode)
+ 
 ;;paredit
    (autoload 'enable-paredit-mode "paredit"
      "Turn on pseudo-structural editing of Lisp code."
@@ -149,7 +175,7 @@
   (setq org-latex-pdf-process
         (list (concat "latexmk -pdflatex='" 
                       (my-org-tex-cmd)
-                      " -shell-escape -interaction nonstopmode'  -pdf -f  %f" ))))
+                      " -shell-escape -interaction nonstopmode' -CF  -pdf -f  %f" ))))
 (add-hook 'org-export-before-parsing-hook 'set-org-latex-pdf-process)
 
 ;; (setq org-latex-pdf-process '("xelatex  -interaction nonstopmode -output-directory %o %f"
@@ -164,18 +190,24 @@
                           ("T1" "fontenc" t)
                           ("" "textcomp" t)
                           ("" "varioref"  nil)
+			  ("" "apacite" t)
+			  ("" "natbib" t)			 
                           ("capitalize,noabbrev" "cleveref"  nil)
                           ,my-org-minted-config))
            ("xelatex" . (("" "url" t)
                          ("" "fontspec" t)
                          ("" "xltxtra" t)
                          ("" "xunicode" t)
+			 ("" "apacite" t)
+			 ("" "natbib" t)
                           ("" "varioref"  nil)
                           ("capitalize,noabbrev" "cleveref"  nil)
                          ,my-org-minted-config ))
            ("lualatex" . (("" "url" t)
                        ("" "fontspec" t)
                           ("" "varioref"  nil)
+			  ("" "apacite" t)
+			  ("" "natbib" t)
                           ("capitalize,noabbrev" "cleveref"  nil)
                        ,my-org-minted-config ))
            ))
@@ -188,3 +220,80 @@
     )
   )
 (add-hook 'org-export-before-parsing-hook 'my-auto-tex-packages 'append)
+
+;;LATEX_CLASSES
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+(setq org-latex-classes
+                `(("memoir"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{memoir}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     "\\counterwithout{section}{chapter}\n"
+                                     ))
+                        ("\\chapter{%s}" . "\\chapter*{%s}")
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+                  ("article"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+		  ("cn-article"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
+				     "\\usepackage[BoldFont=楷体,ItalicFont=楷体,BoldItalicFont=楷体,SlantedFont=楷体,BoldSlantedFont=楷体]{xeCJK}\n"
+				     "\\setCJKmainfont{楷体}\n"
+				     "\\setCJKsansfont{楷体}\n"
+				     "%use fc-list :lang=zh-cn to show all the installed Chinese fonts\n"
+				     "%楷体，幼圆，仿宋，新宋体，黑体\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+		  ;; ("beamer"
+		  ;;       (,@ (concat "\\documentclass[11pt]{beamer}\n"
+		  ;; 	       "\\usepackage[utf8]{inputenc}\n"
+		  ;; 	       "\\usepackage[T1]{fontenc}\n"
+		  ;; 	       "\\usepackage{hyperref}\n"
+		  ;; 	       ))
+		  ;; 	("\\section{%s}" . "\\section*{%s}")
+		  ;; 	("\\begin{frame}[fragile]\\frametitle{%s}"
+		  ;; 	 "\\end{frame}"))
+		   ))
+
+(require 'ox-beamer)
+(setq org-beamer-outline-frame-options "allowframebreaks=0.9")
+(add-to-list 'org-latex-classes '("beamer"
+                                        "\\documentclass[11pt]{beamer}\n
+                                         \\usepackage{hyperref}\n
+                                        "
+                                        ;;org-beamer-sectioning		
+					("\\section{%s}" . "\\section*{%s}")
+					("\\begin{frame}[fragile]\\frametitle{%s}"
+					 "\\end{frame}"
+					 "\\begin{frame}[fragile]\\frametitle{%s}"
+					 "\\end{frame}")
+                                        ))
+;; (require 'org-beamer)
+;; (setq org-beamer-outline-frame-options "")
+;; (add-to-list 'org-latex-classes '("beamer"
+;;                                         "\\documentclass[11pt]{beamer}\n
+;;                                          \\usepackage{hyperref}\n
+;;                                         "
+;;                                         org-beamer-sectioning		
+;; 				        ))
