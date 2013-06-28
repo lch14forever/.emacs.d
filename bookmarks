@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("histone.org"
+ (filename . "~/Documents/presentation/histone.org")
+ (front-context-string . "\n#+startup: beam")
+ (rear-context-string . "CT_TAGS: export\n")
+ (position . 524))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "(add-to-list 'lo")
+ (rear-context-string)
+ (position . 1))
+)

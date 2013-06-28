@@ -265,35 +265,33 @@
                         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                         ("\\paragraph{%s}" . "\\paragraph*{%s}")
                         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
-		  ;; ("beamer"
-		  ;;       (,@ (concat "\\documentclass[11pt]{beamer}\n"
-		  ;; 	       "\\usepackage[utf8]{inputenc}\n"
-		  ;; 	       "\\usepackage[T1]{fontenc}\n"
-		  ;; 	       "\\usepackage{hyperref}\n"
-		  ;; 	       ))
-		  ;; 	("\\section{%s}" . "\\section*{%s}")
-		  ;; 	("\\begin{frame}[fragile]\\frametitle{%s}"
-		  ;; 	 "\\end{frame}"))
+("beamer"
+	 (,@ (concat "\\documentclass[presentation]{beamer}\n"
+		     "\\institute{National University of Singapore}\n"
+		     "\\usetheme{Ilmenau}\n"
+		     "\\usecolortheme{whale}\n"
+		     "\\usefonttheme{structurebold}\n"
+		     "\\useoutertheme[subsection=true]{smoothbars}\n"
+		     "\\useinnertheme{circles}\n"))
+	 ("\\section{%s}" . "\\section*{%s}")
+	 ("\\subsection{%s}" . "\\subsection*{%s}")
+	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
 		   ))
 
+;;beamer setup
 (require 'ox-beamer)
-(setq org-beamer-outline-frame-options "allowframebreaks=0.9")
-(add-to-list 'org-latex-classes '("beamer"
-                                        "\\documentclass[11pt]{beamer}\n
-                                         \\usepackage{hyperref}\n
-                                        "
-                                        ;;org-beamer-sectioning		
-					("\\section{%s}" . "\\section*{%s}")
-					("\\begin{frame}[fragile]\\frametitle{%s}"
-					 "\\end{frame}"
-					 "\\begin{frame}[fragile]\\frametitle{%s}"
-					 "\\end{frame}")
-                                        ))
-;; (require 'org-beamer)
-;; (setq org-beamer-outline-frame-options "")
-;; (add-to-list 'org-latex-classes '("beamer"
-;;                                         "\\documentclass[11pt]{beamer}\n
-;;                                          \\usepackage{hyperref}\n
-;;                                         "
-;;                                         org-beamer-sectioning		
-;; 				        ))
+(setq org-beamer-outline-frame-options "")
+
+;; (setq org-latex-classes
+;;        `("beamer"
+;; 	 (,@ (concat "\\documentclass[presentation]{beamer}\n"
+;; 		     "\\institute{National University of Singapore}\n"
+;; 		     "\\usetheme{Ilmenau}\n"
+;; 		     "\\usecolortheme{whale}\n"
+;; 		     "\\usefonttheme{structurebold}\n"
+;; 		     "\\useoutertheme[subsection=true]{smoothbars}\n"
+;; 		     "\\useinnertheme{circles}\n"))
+;; 	 ("\\section{%s}" . "\\section*{%s}")
+;; 	 ("\\subsection{%s}" . "\\subsection*{%s}")
+;; 	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+;;        )
