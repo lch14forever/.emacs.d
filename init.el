@@ -266,13 +266,15 @@
                         ("\\paragraph{%s}" . "\\paragraph*{%s}")
                         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
 ("beamer"
-	 (,@ (concat "\\documentclass[presentation]{beamer}\n"
+	 (,@ (concat "\\documentclass[compress,presentation]{beamer}\n"
 		     "\\institute{National University of Singapore}\n"
 		     "\\usetheme{Ilmenau}\n"
-		     "\\usecolortheme{whale}\n"
+;;		     "\\usecolortheme{lily}"
 		     "\\usefonttheme{structurebold}\n"
 		     "\\useoutertheme[subsection=true]{smoothbars}\n"
-		     "\\useinnertheme{circles}\n"))
+		     "\\useinnertheme{circles}\n"
+		     "\\setbeamercovered{transparent}"
+		     ))
 	 ("\\section{%s}" . "\\section*{%s}")
 	 ("\\subsection{%s}" . "\\subsection*{%s}")
 	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
@@ -281,17 +283,3 @@
 ;;beamer setup
 (require 'ox-beamer)
 (setq org-beamer-outline-frame-options "")
-
-;; (setq org-latex-classes
-;;        `("beamer"
-;; 	 (,@ (concat "\\documentclass[presentation]{beamer}\n"
-;; 		     "\\institute{National University of Singapore}\n"
-;; 		     "\\usetheme{Ilmenau}\n"
-;; 		     "\\usecolortheme{whale}\n"
-;; 		     "\\usefonttheme{structurebold}\n"
-;; 		     "\\useoutertheme[subsection=true]{smoothbars}\n"
-;; 		     "\\useinnertheme{circles}\n"))
-;; 	 ("\\section{%s}" . "\\section*{%s}")
-;; 	 ("\\subsection{%s}" . "\\subsection*{%s}")
-;; 	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
-;;        )
