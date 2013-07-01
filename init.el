@@ -283,3 +283,7 @@
 ;;beamer setup
 (require 'ox-beamer)
 (setq org-beamer-outline-frame-options "")
+
+;;org-reveal
+(require 'ox-reveal)
+(setq org-reveal-root "file:////home/lichenhao/Documents/reveal.js")
