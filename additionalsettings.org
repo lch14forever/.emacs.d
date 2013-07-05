@@ -1,0 +1,31 @@
+* Babel
+Babel and minted recoganize different cases for "R", we need to modify the default settings in the pygment package and let it recoganize "R".
+#+BEGIN_SRC sh
+cd /usr/lib/python2.7/dist-packages/pygments/lexers/
+#+END_SRC
+
+#+BEGIN_SRC sh
+sudo gedit math.py
+#+END_SRC
+
+Find name = 'S' and add 'R' to the aliases field.
+#+BEGIN_SRC sh
+sudo python _mapping.py
+#+END_SRC
+
+* Ibus
+Ibus.el was installed through deb package PPA
+
+#+BEGIN_SRC sh
+sudo add-apt-repository ppa:irie/elisp
+#+END_SRC
+
+#+BEGIN_SRC sh
+sudo apt-get update
+#+END_SRC
+
+#+BEGIN_SRC sh
+sudo apt-get install ibus-el
+#+END_SRC
+
+
