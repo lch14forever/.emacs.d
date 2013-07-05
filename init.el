@@ -132,7 +132,8 @@
      (sh . t)
      (perl . t)
      (latex . t)
-     (clojure . t) 
+     (clojure . t)
+     (sh . t)
      )
  )
 

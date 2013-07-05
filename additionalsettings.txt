@@ -1,6 +1,0 @@
-
-Babel and minted recoganize different cases for "R", we need to modify the default settings in the pygment package and let it recoganize "R".
-$ cd /usr/lib/python2.7/dist-packages/pygments/lexers/
-$ sudo gedit math.py
-Find name = 'S' and add 'R' to the aliases field.
-$ sudo python _mapping.py
