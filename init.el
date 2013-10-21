@@ -12,6 +12,7 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (deeper-blue)))
  '(font-use-system-font t)
+ '(org-startup-truncated nil)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -110,6 +111,30 @@
 (require 'ibus)
   (global-set-key "\C-ci" 'ibus-mode)
 
+
+;;essh                                                                   
+(require 'essh)                                                    
+(defun essh-sh-hook ()                                             
+  (define-key sh-mode-map "\C-c\C-r" 'pipe-region-to-shell)        
+  (define-key sh-mode-map "\C-c\C-b" 'pipe-buffer-to-shell)        
+  (define-key sh-mode-map "\C-c\C-j" 'pipe-line-to-shell)          
+  (define-key sh-mode-map "\C-c\C-n" 'pipe-line-to-shell-and-step) 
+  (define-key sh-mode-map "\C-c\C-f" 'pipe-function-to-shell)      
+  (define-key sh-mode-map "\C-c\C-d" 'shell-cd-current-directory)) 
+(add-hook 'sh-mode-hook 'essh-sh-hook)                             
+
+;;yasnippet conflict tab
+;; (defun yas/org-very-safe-expand ()
+;;   (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))
+
+;; (add-hook 'org-mode-hook
+;;           (lambda ()
+;;             ;; yasnippet (using the new org-cycle hooks)
+;;             (make-variable-buffer-local 'yas/trigger-key)
+;;             (setq yas/trigger-key [tab])
+;;             (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
+;;             (define-key yas/keymap [tab] 'yas/next-field)))
+
 ;;Org mode
  (global-set-key "\C-cl" 'org-store-link)
  (global-set-key "\C-ca" 'org-agenda)
@@ -143,7 +168,8 @@
 ;;to use minted package
 (setq org-latex-listings 'minted)
 (setq org-latex-minted-options
-      '(("linenos" "true") 
+      '(("linenos" "true")
+	("fontsize" "\\scriptsize")
         ("bgcolor" "bg")  ;; this is dependent on the color being defined
         ("stepnumber" "1")
         ("numbersep" "10pt")
@@ -151,6 +177,7 @@
       )
 (setq my-org-minted-config (concat "%% minted package configuration settings\n"
                                    "\\usepackage{minted}\n"
+				   "\\renewcommand\\listingscaption{Source}"
                                    "\\definecolor{bg}{rgb}{0.8,0.8,0.8}\n" 
                                    "\\usemintedstyle{emacs}\n"
                                    "\\usepackage{upquote}\n"
@@ -241,6 +268,10 @@
                         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
                   ("article"
                         (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
+				     "\\usepackage{tabulary}\n"
+				    ;; "\\usepackage{appendix}\n"
+				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
+				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
                                      "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
                                      "% -- PACKAGES \n[PACKAGES]\n"
                                      "% -- EXTRA \n[EXTRA]\n"
