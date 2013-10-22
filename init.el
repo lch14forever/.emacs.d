@@ -77,7 +77,9 @@
                (make-variable-buffer-local 'ac-sources)
                (setq ac-sources
                      '(ac-source-perl-completion)))))
-
+;;auto complete
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;;clojure and nrepl mode
 (setq auto-mode-alist (cons '("\\.clj$" . clojure-mode) auto-mode-alist))
