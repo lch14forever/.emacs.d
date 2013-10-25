@@ -1,17 +1,27 @@
+;;###############################General settings######################################
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
-
 (setq user-mail-address "lch14forever@gmail.com"
       user-full-name "Li Chenhao")
+;;package repo
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
-
+;;#################################User interface######################################
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(background-color "#002b36")
+ '(background-mode dark)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(cursor-color "#839496")
+ '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
  '(font-use-system-font t)
+ '(foreground-color "#839496")
  '(org-startup-truncated nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -20,13 +30,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;;redo-undo
+(require 'undo-tree)
+(global-undo-tree-mode 1)
+(defalias 'redo 'undo-tree-redo)
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-z") 'redo)
 
-;;package repo
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
+;;color theme
+(require 'color-theme)
+(setq color-theme-is-global t)
 ;;full screen
 ;最大化
 (defun my-maximized ()
@@ -42,10 +55,24 @@
 (my-maximized)
 ;;line number
 (global-linum-mode 1)
+(column-number-mode 1)
+;;highlight the current line
+(global-hl-line-mode +1)
+(set-face-background 'hl-line "#333333")
+;;###################################Programming languages################################
 
+;;*****************General******************
+;;auto complete
+(require 'auto-complete-config)
+(ac-config-default)
+;;ibus
+(require 'ibus)
+  (global-set-key "\C-ci" 'ibus-mode)
+;;********************R*********************
 ;;ESS config
  (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
  (setq ess-ask-for-ess-directory nil) ;otherwise you are prompted each time you start an interactive R session
+;;*******************Perl*******************
 ;;cperl
 (add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|al\\)\\'" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
@@ -64,7 +91,6 @@
 (global-set-key [f3] 'flymake-display-err-menu-for-current-line)
 (global-set-key [f4] 'flymake-goto-next-error)
 (add-hook 'cperl-mode-hook 'flymake-find-file-hook) ;;auto-start
-
 ;;perl auto-complete
 (add-hook 'cperl-mode-hook
           (lambda()
@@ -77,15 +103,32 @@
                (make-variable-buffer-local 'ac-sources)
                (setq ac-sources
                      '(ac-source-perl-completion)))))
-;;auto complete
-(require 'auto-complete-config)
-(ac-config-default)
 
+;;*********************Python*******************
+;; python-mode
+(setq py-install-directory "~/.emacs.d/mypackages/python-mode.el-6.1.2")
+(add-to-list 'load-path py-install-directory)
+(require 'python-mode)
+; use IPython
+(setq-default py-shell-name "ipython")
+(setq-default py-which-bufname "IPython")
+; use the wx backend, for both mayavi and matplotlib
+(setq py-python-command-args
+  '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
+(setq py-force-py-shell-name-p t)
+; switch to the interpreter after executing code
+(setq py-shell-switch-buffers-on-execute-p t)
+(setq py-switch-buffers-on-execute-p nil)
+; don't split windows
+(setq py-split-windows-on-execute-p t)
+; try to automagically figure out indentation
+(setq py-smart-indentation t)
+
+;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
 (setq auto-mode-alist (cons '("\\.clj$" . clojure-mode) auto-mode-alist))
 
 ;; show parens
-
 (show-paren-mode t)
 
 ;; (defun turn-on-paren-mode ()
@@ -109,11 +152,7 @@
     (add-hook 'clojure-test-mode-hook          #'enable-paredit-mode)
     (add-hook 'nrepl-mode-hook           #'enable-paredit-mode)
 
-;;ibus
-(require 'ibus)
-  (global-set-key "\C-ci" 'ibus-mode)
-
-
+;;****************Shell**************
 ;;essh                                                                   
 (require 'essh)                                                    
 (defun essh-sh-hook ()                                             
@@ -137,7 +176,8 @@
 ;;             (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
 ;;             (define-key yas/keymap [tab] 'yas/next-field)))
 
-;;Org mode
+
+;;############################Org mode##############################
  (global-set-key "\C-cl" 'org-store-link)
  (global-set-key "\C-ca" 'org-agenda)
  (global-set-key "\C-cb" 'org-iswitchb)
@@ -274,6 +314,9 @@
 				    ;; "\\usepackage{appendix}\n"
 				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
 				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
+				    ;; "\\usepackage{float}\n"
+				    ;; "\\floatstyle{plaintop}\n"
+				    ;; "\\restylefloat{table}\n"
                                      "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
                                      "% -- PACKAGES \n[PACKAGES]\n"
                                      "% -- EXTRA \n[EXTRA]\n"
