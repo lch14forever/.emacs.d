@@ -315,6 +315,7 @@
                   ("article"
                         (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
 				     "\\usepackage{tabulary}\n"
+				     "\\usepackage{amsmath}\n"
 				    ;; "\\usepackage{appendix}\n"
 				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
 				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
