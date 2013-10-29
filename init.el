@@ -105,24 +105,28 @@
                      '(ac-source-perl-completion)))))
 
 ;;*********************Python*******************
-;; python-mode
-(setq py-install-directory "~/.emacs.d/mypackages/python-mode.el-6.1.2")
-(add-to-list 'load-path py-install-directory)
-(require 'python-mode)
-; use IPython
-(setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
-; use the wx backend, for both mayavi and matplotlib
-(setq py-python-command-args
-  '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
-(setq py-force-py-shell-name-p t)
-; switch to the interpreter after executing code
-(setq py-shell-switch-buffers-on-execute-p t)
-(setq py-switch-buffers-on-execute-p nil)
-; don't split windows
-(setq py-split-windows-on-execute-p t)
-; try to automagically figure out indentation
-(setq py-smart-indentation t)
+;; ;; python-mode
+;; (setq py-install-directory "~/.emacs.d/mypackages/python-mode")
+;; (add-to-list 'load-path py-install-directory)
+;; (require 'python-mode)
+;; (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;; (add-to-list 'interpreter-mode-alist '("python2.7" . python-mode))
+;; (when (executable-find "ipython")
+;;     (setq org-babel-python-mode 'python-mode))
+;; ; use IPython
+;; (setq-default py-shell-name "ipython")
+;; (setq-default py-which-bufname "IPython")
+;; ; use the wx backend, for both mayavi and matplotlib
+;; (setq py-python-command-args
+;;   '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
+;;  (setq py-force-py-shell-name-p t)
+;; ; switch to the interpreter after executing code
+;; (setq py-shell-switch-buffers-on-execute-p t)
+;; (setq py-switch-buffers-on-execute-p nil)
+;; ; don't split windows
+;; (setq py-split-windows-on-execute-p t)
+;; ; try to automagically figure out indentation
+;; (setq py-smart-indentation t)
 
 ;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
