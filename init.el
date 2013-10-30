@@ -68,6 +68,10 @@
 ;;ibus
 (require 'ibus)
   (global-set-key "\C-ci" 'ibus-mode)
+;;******************Text********************
+;; insert real "Tabs"
+(define-key text-mode-map (kbd "TAB") 'self-insert-command)
+
 ;;********************R*********************
 ;;ESS config
  (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
