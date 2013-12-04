@@ -1,6 +1,6 @@
 ;;###############################General settings######################################
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
-(setq user-mail-address "lch14forever@gmail.com"
+(setq user-mail-address "lichenhao.sg@gmail.com"
       user-full-name "Li Chenhao")
 ;;package repo
 (require 'package)
