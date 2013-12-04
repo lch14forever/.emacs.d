@@ -191,6 +191,11 @@
  (global-set-key "\C-cb" 'org-iswitchb)
  (setq org-log-done 'time)
 
+;; Spelling check with flyspell
+(require 'flyspell)
+(add-hook 'org-mode-hook (lambda () (flyspell-mode 1)))
+(add-hook 'org-mode-hook (lambda () (setq ispell-parser 'tex)))
+
  ;;syntax highlighting within Org 
  (setq org-src-fontify-natively t)
  (require 'org-latex)
@@ -366,6 +371,17 @@
 	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
 		   ))
 
+
+(defun my/org-export-ignoreheadings-hook (backend)
+   "My backend aware export preprocess hook."
+    (save-excursion
+      (let* ((tag "ignoreheading"))
+        (org-map-entries (lambda ()
+                           (delete-region (point-at-bol) (point-at-eol)))
+                         (concat ":" tag ":")))
+))
+(setq org-export-before-processing-hook 'my/org-export-ignoreheadings-hook)
+
 ;;beamer setup
 (require 'ox-beamer)
 (setq org-beamer-outline-frame-options "")
@@ -373,3 +389,5 @@
 ;;org-reveal
 (require 'ox-reveal)
 (setq org-reveal-root "file:////home/lichenhao/Documents/reveal.js")
+
+
