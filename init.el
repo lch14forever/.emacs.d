@@ -14,16 +14,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
  '(background-color "#002b36")
  '(background-mode dark)
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
- '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-enabled-themes (quote (adwaita)))
  '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+ '(fci-rule-color "#eee8d5")
  '(font-use-system-font t)
  '(foreground-color "#839496")
  '(org-startup-truncated nil)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#cb4b16") (60 . "#b58900") (80 . "#859900") (100 . "#2aa198") (120 . "#268bd2") (140 . "#d33682") (160 . "#6c71c4") (180 . "#dc322f") (200 . "#cb4b16") (220 . "#b58900") (240 . "#859900") (260 . "#2aa198") (280 . "#268bd2") (300 . "#d33682") (320 . "#6c71c4") (340 . "#dc322f") (360 . "#cb4b16"))))
+ '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -390,4 +396,27 @@
 (require 'ox-reveal)
 (setq org-reveal-root "file:////home/lichenhao/Documents/reveal.js")
 
-
+;; Publishing
+(require 'ox-publish)
+(require 'ox-html)
+(setq org-publish-project-alist
+      '(
+       ;; ... add all the components here (see below)...
+	("org-notes"
+	 :base-directory "~/web-org/"
+	 :base-extension "org"
+	 :publishing-directory "~/web-public_html/"
+	 :recursive t
+	 :publishing-function org-html-publish-to-html
+	 :headline-levels 4             ; Just the default for this project.
+	 :auto-preamble t
+	 )
+	("org-static"
+	 :base-directory "~/web-org/"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	 :publishing-directory "~/web-public_html/"
+	 :recursive t
+	 :publishing-function org-publish-attachment
+	 )
+	("website" :components ("org-notes" "org-static"))
+      ))
