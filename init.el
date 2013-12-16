@@ -65,12 +65,28 @@
 ;;highlight the current line
 (global-hl-line-mode +1)
 (set-face-background 'hl-line "#333333")
+
+;;#################################User functions -- Shortcuts######################################
+
+;;***************select current line********************
+(transient-mark-mode 1)
+
+(defun select-current-line ()
+  "Select the current line"
+  (interactive)
+  (end-of-line) ; move to end of line
+  (set-mark (line-beginning-position)))
+
+(global-set-key (kbd "C-`") 'select-current-line)
+
 ;;###################################Programming languages################################
 
 ;;*****************General******************
 ;;auto complete
 (require 'auto-complete-config)
 (ac-config-default)
+(add-hook 'html-mode-hook (lambda () (auto-complete-mode t)))
+
 ;;ibus
 (require 'ibus)
   (global-set-key "\C-ci" 'ibus-mode)
@@ -185,11 +201,12 @@
 ;; (add-hook 'org-mode-hook
 ;;           (lambda ()
 ;;             ;; yasnippet (using the new org-cycle hooks)
-;;             (make-variable-buffer-local 'yas/trigger-key)
 ;;             (setq yas/trigger-key [tab])
 ;;             (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
 ;;             (define-key yas/keymap [tab] 'yas/next-field)))
 
+;;****************HTML**************
+(load "nxhtml/autostart.el")
 
 ;;############################Org mode##############################
  (global-set-key "\C-cl" 'org-store-link)
