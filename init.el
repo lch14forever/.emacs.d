@@ -87,6 +87,10 @@
 (ac-config-default)
 (add-hook 'html-mode-hook (lambda () (auto-complete-mode t)))
 
+;;rainbow delimiter mode
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode t)
+
 ;;ibus
 (require 'ibus)
   (global-set-key "\C-ci" 'ibus-mode)
