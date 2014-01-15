@@ -1,0 +1,73 @@
+;; -*- emacs-lisp -*- <14/01/15 17:59:12 /home/lichenhao/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["scpc" nil "172.18.149.243" nil nil]
+  ("uname" "Linux 3.11.0-14-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1001)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("uid-integer" 1001)
+  ("~" "/home/lichenhao"))
+ (["scpc" nil
+   #("172.18.149.104" 0 1
+     (fontified t)
+     1 2
+     (fontified t)
+     2 3
+     (fontified t)
+     3 4
+     (fontified t)
+     4 5
+     (fontified t)
+     5 6
+     (fontified t)
+     6 7
+     (fontified t)
+     7 8
+     (fontified t)
+     8 9
+     (fontified t)
+     9 10
+     (fontified t)
+     10 11
+     (fontified t)
+     11 12
+     (fontified t)
+     12 13
+     (fontified t)
+     13 14
+     (fontified t))
+   nil nil]
+  ("uname" "Linux 3.5.0-23-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  (#("~" 0 1
+     (fontified t))
+   "/home/lichenhao")
+  ("file-exists" "test -e")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1004)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("uid-integer" 1004)))

@@ -2,9 +2,24 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init.el"
+(("CSI.BIOINFO"
+ (filename . "/scpc:172.18.149.104:/home/lichenhao/")
+ (front-context-string . ".cache\n  -rw-r--")
+ (rear-context-string . "96 Jan 13 12:34 ")
+ (position . 416))
+("Emacs Settings"
  (filename . "~/.emacs.d/init.el")
- (front-context-string . "(add-to-list 'lo")
+ (front-context-string . ";;##############")
  (rear-context-string)
  (position . 1))
+("MJF-lab-notes"
+ (filename . "~/Dropbox/MJF-lab-notes/")
+ (front-context-string . "group-meeting\n  ")
+ (rear-context-string . "96 Jan 10 09:35 ")
+ (position . 257))
+("remote_projects@CSI"
+ (filename . "/scpc:172.18.149.243:/home/lichenhao/projects/")
+ (front-context-string . "..\n  drwxrwxr-x ")
+ (rear-context-string . "96 Jan 13 12:33 ")
+ (position . 169))
 )
