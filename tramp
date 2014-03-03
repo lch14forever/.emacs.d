@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/01/15 20:25:13 /home/lichenhao/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/03/03 10:03:39 /home/lichenhao/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -91,4 +91,65 @@
   ("readlink" "\\readlink")
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")))
+  ("perl" "\\perl")
+  (#("~" 0 1
+     (fontified t))
+   "/home/lichenhao")
+  ("uid-integer" 1001))
+ ([#("scpc" 0 1
+     (fontified t)
+     1 2
+     (fontified t)
+     2 3
+     (fontified t)
+     3 4
+     (fontified t))
+   nil
+   #("172.16.229.43" 0 1
+     (fontified t)
+     1 2
+     (fontified t)
+     2 3
+     (fontified t)
+     3 4
+     (fontified t)
+     4 5
+     (fontified t)
+     5 6
+     (fontified t)
+     6 7
+     (fontified t)
+     7 8
+     (fontified t)
+     8 9
+     (fontified t)
+     9 10
+     (fontified t)
+     10 11
+     (fontified t)
+     11 12
+     (fontified t)
+     12 13
+     (fontified t))
+   nil nil]
+  ("uname" "Linux 3.11.0-15-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("file-exists" "test -e")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1001)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("~" "/home/lichenhao")
+  ("trash" nil)
+  ("uid-integer" 1001))
+ (["scpc" nil "scpc" nil nil]
+  nil))

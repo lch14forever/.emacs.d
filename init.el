@@ -78,6 +78,8 @@
   (set-mark (line-beginning-position)))
 
 (global-set-key (kbd "C-`") 'select-current-line)
+;;###################################Dired file system################################
+(setq wdired-allow-to-change-permissions t)
 
 ;;###################################Programming languages################################
 
