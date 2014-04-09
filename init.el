@@ -8,6 +8,9 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;;#######################################Mini buffer###################################
+(ido-mode t)
+
 ;;#################################User interface######################################
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -18,6 +21,7 @@
  '(ansi-color-names-vector (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
  '(background-color "#002b36")
  '(background-mode dark)
+ '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
  '(custom-enabled-themes (quote (adwaita)))
@@ -26,6 +30,7 @@
  '(font-use-system-font t)
  '(foreground-color "#839496")
  '(org-startup-truncated nil)
+ '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#cb4b16") (60 . "#b58900") (80 . "#859900") (100 . "#2aa198") (120 . "#268bd2") (140 . "#d33682") (160 . "#6c71c4") (180 . "#dc322f") (200 . "#cb4b16") (220 . "#b58900") (240 . "#859900") (260 . "#2aa198") (280 . "#268bd2") (300 . "#d33682") (320 . "#6c71c4") (340 . "#dc322f") (360 . "#cb4b16"))))
@@ -65,6 +70,7 @@
 ;;highlight the current line
 (global-hl-line-mode +1)
 (set-face-background 'hl-line "#333333")
+(blink-cursor-mode 0)
 
 ;;#################################User functions -- Shortcuts######################################
 
@@ -294,7 +300,6 @@
 ;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"
 ;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"))
 
-
 (defun my-auto-tex-packages (backend)
   "Automatically set packages to include for different LaTeX engines"
   (let ((my-org-export-latex-packages-alist 
@@ -337,7 +342,28 @@
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
 (setq org-latex-classes
-                `(("memoir"
+                `(("book"
+                        (,@ (concat  "\\documentclass[]{book}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\chapter{%s}" . "\\chapter*{%s}")
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+		  ("phdthesis"
+                        (,@ (concat  "\\documentclass[twoside,12pt]{./latex/PhDthesisPSnPDF}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\chapter{%s}" . "\\chapter*{%s}")
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+
+		  ("memoir"
                         (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{memoir}\n"
                                      "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
                                      "% -- PACKAGES \n[PACKAGES]\n"
