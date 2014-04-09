@@ -299,6 +299,23 @@
 ;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"
 ;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"))
 
+  (setq org-latex-default-packages-alist
+        '(("" "fixltx2e" nil)
+          ("" "longtable" nil)
+          ("" "graphicx" t)
+          ("" "wrapfig" nil)
+          ("" "soul" t)
+          ("" "marvosym" t)
+          ("" "wasysym" t)
+          ("" "latexsym" t)
+          ("" "tabularx" nil)
+          ("" "booktabs" nil)
+          ("" "xcolor" nil)
+          "\\tolerance=1000"
+          )
+        )
+
+
 (defun my-auto-tex-packages (backend)
   "Automatically set packages to include for different LaTeX engines"
   (let ((my-org-export-latex-packages-alist 
@@ -306,6 +323,7 @@
                           ("T1" "fontenc" t)
                           ("" "textcomp" t)
                           ("" "varioref"  nil)
+			  ("" "hyperref" nil) ;; It is better to put hyperref as the last package imported
 			  ("" "apacite" t)
 			  ("" "natbib" t)			 
                           ("capitalize,noabbrev" "cleveref"  nil)
@@ -317,11 +335,13 @@
 			 ("" "apacite" t)
 			 ("" "natbib" t)
                           ("" "varioref"  nil)
+			  ("" "hyperref" nil)
                           ("capitalize,noabbrev" "cleveref"  nil)
                          ,my-org-minted-config ))
            ("lualatex" . (("" "url" t)
                        ("" "fontspec" t)
                           ("" "varioref"  nil)
+			  ("" "hyperref" nil)
 			  ("" "apacite" t)
 			  ("" "natbib" t)
                           ("capitalize,noabbrev" "cleveref"  nil)
@@ -351,16 +371,6 @@
                         ("\\section{%s}" . "\\section*{%s}")
                         ("\\subsection{%s}" . "\\subsection*{%s}")
                         ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
-		  ("phdthesis"
-                        (,@ (concat  "\\documentclass[twoside,12pt]{./latex/PhDthesisPSnPDF}\n"
-                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
-                                     "% -- PACKAGES \n[PACKAGES]\n"
-                                     "% -- EXTRA \n[EXTRA]\n"
-                                     ))
-                        ("\\chapter{%s}" . "\\chapter*{%s}")
-                        ("\\section{%s}" . "\\section*{%s}")
-                        ("\\subsection{%s}" . "\\subsection*{%s}")
-                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
 
 		  ("memoir"
                         (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{memoir}\n"
@@ -382,6 +392,7 @@
 				    ;; "\\usepackage{appendix}\n"
 				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
 				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
+				     "\\usepackage{hyperref}\n"
 				    ;; "\\usepackage{float}\n"
 				    ;; "\\floatstyle{plaintop}\n"
 				    ;; "\\restylefloat{table}\n"
