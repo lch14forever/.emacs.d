@@ -394,7 +394,7 @@
 				    ;; "\\usepackage{appendix}\n"
 				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
 				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
-				     "\\usepackage{hyperref}\n"
+				    ;; "\\usepackage{hyperref}\n"
 				    ;; "\\usepackage{float}\n"
 				    ;; "\\floatstyle{plaintop}\n"
 				    ;; "\\restylefloat{table}\n"

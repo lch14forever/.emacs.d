@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("CSI.BIOINFO"
+(("MJF-server"
+ (filename . "/scpc:172.18.149.97:/home/lichenhao/")
+ (front-context-string . ".bashrc\n  drwx--")
+ (rear-context-string . "37 Apr 21 13:57 ")
+ (position . 338))
+("CSI.BIOINFO"
  (filename . "/scpc:172.18.149.104:/home/lichenhao/")
  (front-context-string . ".cache\n  -rw-r--")
  (rear-context-string . "96 Jan 13 12:34 ")

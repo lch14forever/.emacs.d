@@ -1,27 +1,8 @@
-;; -*- emacs-lisp -*- <14/03/28 12:12:53 /home/lichenhao/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/06/18 17:17:47 /home/lichenhao/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scpc" nil "172.18.149.243" nil nil]
-  ("uname" "Linux 3.11.0-14-generic")
-  ("test" "test")
-  ("remote-path"
-   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
-  ("remote-shell" "/bin/sh")
-  ("busybox" nil)
-  ("ls" "/bin/ls --color=never")
-  ("ls-dired" t)
-  ("stat" "\\stat")
-  ("file-exists" "test -e")
-  ("id" "/usr/bin/id")
-  ("gid-integer" 1001)
-  ("readlink" "\\readlink")
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("uid-integer" 1001)
-  ("~" "/home/lichenhao"))
- (["scpc" nil
+((["scpc" nil
    #("172.16.229.50" 0 13
      (fontified t))
    nil nil]
@@ -46,33 +27,6 @@
      (fontified t))
    "/home/lichenhao")
   ("uid-integer" 1001))
- ([#("scpc" 0 4
-     (fontified t))
-   nil
-   #("172.16.229.43" 0 13
-     (fontified t))
-   nil nil]
-  ("uname" "Linux 3.11.0-15-generic")
-  ("test" "test")
-  ("remote-path"
-   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
-  ("remote-shell" "/bin/sh")
-  ("busybox" nil)
-  ("stat" "\\stat")
-  ("file-exists" "test -e")
-  ("id" "/usr/bin/id")
-  ("gid-integer" 1001)
-  ("ls" "/bin/ls --color=never")
-  ("ls-dired" t)
-  ("readlink" "\\readlink")
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  (#("~" 0 1
-     (fontified t))
-   "/home/lichenhao")
-  ("uid-integer" 1001)
-  ("trash" nil))
  ([#("scpc" 0 1
      (fontified t)
      1 2
@@ -187,4 +141,58 @@
   ("gid-integer" 1001)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")))
+  ("perl" "\\perl"))
+ (["scpc" nil "172.18.149.97" nil nil]
+  ("uname" "Linux 3.13.0-24-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("~" "/home/lichenhao")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1001)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("readlink" "\\readlink")
+  ("uid-integer" 78036))
+ (["scpc" nil "172.18.149.243" nil nil]
+  ("uname" "Linux 3.13.0-24-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1001)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl"))
+ (["scpc" nil "172.16.229.43" nil nil]
+  ("uname" "Linux 3.11.0-15-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1002)
+  ("trash" nil)
+  ("readlink" "\\readlink")
+  ("uid-integer" 1002)))
