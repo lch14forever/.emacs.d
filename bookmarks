@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("MJF-server"
+(("GIS-Lab notes"
+ (filename . "~/Dropbox/GIS/labnotes.org")
+ (front-context-string . "\n* [2/5] here's ")
+ (rear-context-string)
+ (position . 1))
+("MJF-server"
  (filename . "/scpc:172.18.149.97:/home/lichenhao/")
  (front-context-string . ".bashrc\n  drwx--")
  (rear-context-string . "37 Apr 21 13:57 ")

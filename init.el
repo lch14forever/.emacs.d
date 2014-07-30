@@ -92,7 +92,8 @@
 ;;auto complete
 (require 'auto-complete-config)
 (ac-config-default)
-(add-hook 'html-mode-hook (lambda () (auto-complete-mode t)))
+;;complete file path
+(setq-default ac-sources (append ac-sources '(ac-source-filename)))
 
 ;;rainbow delimiter mode
 (require 'rainbow-delimiters)
@@ -219,6 +220,20 @@
   (define-key sh-mode-map "\C-c\C-f" 'pipe-function-to-shell)      
   (define-key sh-mode-map "\C-c\C-d" 'shell-cd-current-directory)) 
 (add-hook 'sh-mode-hook 'essh-sh-hook)                             
+;; auto complete path replaced by master setup
+;; (defun my-ac-sh-mode ()
+;;   (setq ac-sources '(ac-source-filename
+;; 		     ac-source-functions
+;; 		     ac-source-yasnippet
+;; 		     ac-source-variables
+;; 		     ac-source-symbols
+;; 		     ac-source-features
+;; 		     ac-source-abbrev
+;; 		     ac-source-words-in-same-mode-buffers
+;; 		     ac-source-dictionary
+;; 		     ac-source-files-in-current-dir
+;; 		     ac-source-filename)))
+;; (add-hook 'sh-mode-hook 'my-ac-sh-mode)
 
 ;;yasnippet conflict tab
 ;; (defun yas/org-very-safe-expand ()
