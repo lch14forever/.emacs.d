@@ -99,9 +99,6 @@
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode t)
 
-;;ibus
-(require 'ibus)
-  (global-set-key "\C-ci" 'ibus-mode)
 ;;******************Text********************
 ;; insert real "Tabs"
 (define-key text-mode-map (kbd "TAB") 'self-insert-command)
