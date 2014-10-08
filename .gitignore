@@ -1,0 +1,7 @@
+# sessions
+session.*
+
+auto-save-list/
+
+# backups
+*~

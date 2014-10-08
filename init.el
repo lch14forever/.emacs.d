@@ -450,7 +450,7 @@
                         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
 ("beamer"
 	 (,@ (concat "\\documentclass[compress,presentation]{beamer}\n"
-		     "\\institute{National University of Singapore}\n"
+		     "\\institute{GIS}\n"
 		     "\\usetheme{Ilmenau}\n"
 ;;		     "\\usecolortheme{lily}"
 		     "\\usefonttheme{structurebold}\n"
