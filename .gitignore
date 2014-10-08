@@ -2,11 +2,11 @@
 session.*
 
 auto-save-list/
-ac-comphist.dat
+*.dat
 
 # backups
 *~
 
-# each local emacs has its own bookmarks
+# each local emacs has its own settings
 bookmarks
-
+tramp
