@@ -23,6 +23,7 @@
  '(background-mode dark)
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
  '(custom-enabled-themes (quote (adwaita)))
  '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
@@ -109,6 +110,16 @@
 (require 'ess-eldoc)
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
 (setq ess-ask-for-ess-directory nil) ;otherwise you are prompted each time you start an interactive R session
+
+; Rscript template
+(add-hook 'find-file-hooks 'maybe-load-template)
+(defun maybe-load-template ()
+  (interactive)
+  (when (and
+         (string-match "\\.rscript$" (buffer-file-name))
+         (eq 1 (point-max)))
+    (insert-file "~/.emacs.d/templates/template.rscript")))
+
 ;;*******************Perl*******************
 ;;cperl
 (add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|al\\)\\'" . cperl-mode))
@@ -177,6 +188,14 @@
  python-shell-completion-string-code
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;To load python templates
+(add-hook 'find-file-hooks 'maybe-load-template)
+(defun maybe-load-template ()
+  (interactive)
+  (when (and
+         (string-match "\\.py$" (buffer-file-name))
+         (eq 1 (point-max)))
+    (insert-file "~/.emacs.d/templates/template.py")))
 
 ;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
