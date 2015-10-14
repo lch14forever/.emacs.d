@@ -121,9 +121,9 @@
 
 ;;********************R*********************
 ;;ESS config
-(add-to-list 'load-path "/home/lich/.emacs.d/mypackages/ESS/lisp/")
+;; (add-to-list 'load-path "/home/lich/.emacs.d/mypackages/ESS/lisp/")
 (load "ess-site")
-(setq-default inferior-R-program-name "R-3.1.2")
+
 ;; (require 'ess-site)
 ;; (require 'ess-eldoc)
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
@@ -279,6 +279,7 @@
 (add-to-list 'auto-mode-alist '("\.bpipe$" . groovy-mode))
 (add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
 
+
 ;;############################Org mode##############################
  (global-set-key "\C-cl" 'org-store-link)
  (global-set-key "\C-ca" 'org-agenda)
@@ -290,10 +291,10 @@
 (add-hook 'org-mode-hook (lambda () (flyspell-mode 1)))
 (add-hook 'org-mode-hook (lambda () (setq ispell-parser 'tex)))
 
- ;; ;;syntax highlighting within Org 
- ;; (setq org-src-fontify-natively t)
- ;; (require 'org-latex)
- ;; (require 'org-special-blocks) ;; #+begin_foo #+end_foo
+ ;;syntax highlighting within Org 
+ (setq org-src-fontify-natively t)
+ (require 'org-latex)
+ (require 'org-special-blocks) ;; #+begin_foo #+end_foo
 
 ;;babel to evaluate the code
  (org-babel-do-load-languages
@@ -313,4 +314,232 @@
 
 ;;do not ask before evaluation
 (setq org-confirm-babel-evaluate nil)
+
+;;to use minted package
+(setq org-latex-listings 'minted)
+(setq org-latex-minted-options
+      '(("linenos" "true")
+	("fontsize" "\\scriptsize")
+        ("bgcolor" "bg")  ;; this is dependent on the color being defined
+        ("stepnumber" "1")
+        ("numbersep" "10pt")
+        )
+      )
+(setq my-org-minted-config (concat "%% minted package configuration settings\n"
+                                   "\\usepackage{minted}\n"
+				   "\\renewcommand\\listingscaption{Source}"
+                                   "\\definecolor{bg}{rgb}{0.8,0.8,0.8}\n" 
+                                   "\\usemintedstyle{emacs}\n"
+                                   "\\usepackage{upquote}\n"
+                                   "\\AtBeginDocument{%\n"
+                                   "\\def\\PYZsq{\\textquotesingle}%\n"
+                                   "}\n"
+                                    ))
+
+;;#+LATEX_CMD: pdflatex/xelatex/lualatex
+(defun my-org-tex-cmd ()
+  "set the correct type of LaTeX process to run for the org buffer"
+  (let ((case-fold-search t))
+    (if (string-match  "^#\\+LATEX_CMD:\s+\\(\\w+\\)"   
+                       (buffer-substring-no-properties (point-min) (point-max)))
+        (downcase (match-string 1 (buffer-substring-no-properties (point-min) (point-max))))
+      "xelatex"
+    ))
+  )
+
+(defun set-org-latex-pdf-process (backend)
+  "When exporting from .org with latex, automatically run latex,
+   pdflatex, or xelatex as appropriate, using latexmk."
+  (setq org-latex-pdf-process
+        (list (concat "latexmk -pdflatex='" 
+                      (my-org-tex-cmd)
+                      " -shell-escape -interaction nonstopmode' -CF  -pdf -f  %f" ))))
+(add-hook 'org-export-before-parsing-hook 'set-org-latex-pdf-process)
+
+;; (setq org-latex-pdf-process '("xelatex  -interaction nonstopmode -output-directory %o %f"
+;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"
+;; 			      "xelatex  -interaction nonstopmode -output-directory %o %f"))
+
+  (setq org-latex-default-packages-alist
+        '(("" "fixltx2e" nil)
+          ("" "longtable" nil)
+          ("" "graphicx" t)
+          ("" "wrapfig" nil)
+          ("" "soul" t)
+          ("" "marvosym" t)
+          ("" "wasysym" t)
+          ("" "latexsym" t)
+          ("" "tabularx" nil)
+          ("" "booktabs" nil)
+          ("" "xcolor" nil)
+          "\\tolerance=1000"
+          )
+        )
+
+
+(defun my-auto-tex-packages (backend)
+  "Automatically set packages to include for different LaTeX engines"
+  (let ((my-org-export-latex-packages-alist 
+         `(("pdflatex" . (("AUTO" "inputenc" t)
+                          ("T1" "fontenc" t)
+                          ("" "textcomp" t)
+                          ("" "varioref"  nil)
+			  ("" "hyperref" nil) ;; It is better to put hyperref as the last package imported
+			  ("" "apacite" t)
+			  ("" "natbib" t)			 
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                          ,my-org-minted-config))
+           ("xelatex" . (("" "url" t)
+                         ("" "fontspec" t)
+                         ("" "xltxtra" t)
+                         ("" "xunicode" t)
+			 ("" "apacite" t)
+			 ("" "natbib" t)
+                          ("" "varioref"  nil)
+			  ("" "hyperref" nil)
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                         ,my-org-minted-config ))
+           ("lualatex" . (("" "url" t)
+                       ("" "fontspec" t)
+                          ("" "varioref"  nil)
+			  ("" "hyperref" nil)
+			  ("" "apacite" t)
+			  ("" "natbib" t)
+                          ("capitalize,noabbrev" "cleveref"  nil)
+                       ,my-org-minted-config ))
+           ))
+        (which-tex (my-org-tex-cmd)))
+    (if (car (assoc which-tex my-org-export-latex-packages-alist))
+        (setq org-latex-packages-alist 
+              (cdr (assoc which-tex my-org-export-latex-packages-alist)))
+      (warn "no packages")
+      )
+    )
+  )
+(add-hook 'org-export-before-parsing-hook 'my-auto-tex-packages 'append)
+
+;;LATEX_CLASSES
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+(setq org-latex-classes
+                `(("book"
+                        (,@ (concat  "\\documentclass[]{book}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\chapter{%s}" . "\\chapter*{%s}")
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+
+		  ("memoir"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{memoir}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     "\\counterwithout{section}{chapter}\n"
+                                     ))
+                        ("\\chapter{%s}" . "\\chapter*{%s}")
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+                  ("article"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
+				     "\\usepackage{tabulary}\n"
+				     "\\usepackage{amsmath}\n"
+				    ;; "\\usepackage{appendix}\n"
+				     "\\usepackage[margin=10pt,font=small,labelfont=bf]{caption}\n"
+				     "\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n"
+				    ;; "\\usepackage{hyperref}\n"
+				    ;; "\\usepackage{float}\n"
+				    ;; "\\floatstyle{plaintop}\n"
+				    ;; "\\restylefloat{table}\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+		  ("cn-article"
+                        (,@ (concat  "\\documentclass[11pt,oneside,a4paper,x11names]{article}\n"
+				     "\\usepackage[BoldFont=楷体,ItalicFont=楷体,BoldItalicFont=楷体,SlantedFont=楷体,BoldSlantedFont=楷体]{xeCJK}\n"
+				     "\\setCJKmainfont{楷体}\n"
+				     "\\setCJKsansfont{楷体}\n"
+				     "%use fc-list :lang=zh-cn to show all the installed Chinese fonts\n"
+				     "%楷体，幼圆，仿宋，新宋体，黑体\n"
+                                     "% -- DEFAULT PACKAGES \n[DEFAULT-PACKAGES]\n"
+                                     "% -- PACKAGES \n[PACKAGES]\n"
+                                     "% -- EXTRA \n[EXTRA]\n"
+                                     ))
+                        ("\\section{%s}" . "\\section*{%s}")
+                        ("\\subsection{%s}" . "\\subsection*{%s}")
+                        ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                        ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                        ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+("beamer"
+	 (,@ (concat "\\documentclass[compress,presentation]{beamer}\n"
+		     "\\institute{GIS}\n"
+		     "\\usetheme{Ilmenau}\n"
+;;		     "\\usecolortheme{lily}"
+		     "\\usefonttheme{structurebold}\n"
+		     "\\useoutertheme[subsection=true]{smoothbars}\n"
+		     "\\useinnertheme{circles}\n"
+		     "\\setbeamercovered{transparent}"
+		     ))
+	 ("\\section{%s}" . "\\section*{%s}")
+	 ("\\subsection{%s}" . "\\subsection*{%s}")
+	 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+		   ))
+
+
+(defun my/org-export-ignoreheadings-hook (backend)
+   "My backend aware export preprocess hook."
+    (save-excursion
+      (let* ((tag "ignoreheading"))
+        (org-map-entries (lambda ()
+                           (delete-region (point-at-bol) (point-at-eol)))
+                         (concat ":" tag ":")))
+))
+(setq org-export-before-processing-hook 'my/org-export-ignoreheadings-hook)
+
+;;beamer setup
+(require 'ox-beamer)
+(setq org-beamer-outline-frame-options "")
+
+;;org-reveal
+(require 'ox-reveal)
+(setq org-reveal-root "file:////home/lichenhao/Documents/reveal.js")
+
+;; Publishing
+(require 'ox-publish)
+(require 'ox-html)
+(setq org-publish-project-alist
+      '(
+       ;; ... add all the components here (see below)...
+	("org-notes"
+	 :base-directory "~/web-org/"
+	 :base-extension "org"
+	 :publishing-directory "~/web-public_html/"
+	 :recursive t
+	 :publishing-function org-html-publish-to-html
+	 :headline-levels 4             ; Just the default for this project.
+	 :auto-preamble t
+	 )
+	("org-static"
+	 :base-directory "~/web-org/"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	 :publishing-directory "~/web-public_html/"
+	 :recursive t
+	 :publishing-function org-publish-attachment
+	 )
+	("website" :components ("org-notes" "org-static"))
+      ))
+
+;; TODO keyword markup
 
