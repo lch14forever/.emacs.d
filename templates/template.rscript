@@ -20,4 +20,4 @@ if ( !is.null(opt$help) ) {
 #but were not specified.
 if ( is.null(opt$variable ) ) {opt$variable = 1}
 if ( is.null(opt$logical ) ) { opt$logical = TRUE }
-
+x

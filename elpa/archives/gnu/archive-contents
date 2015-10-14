@@ -12,9 +12,15 @@
        ((:keywords "tools" "processes" "convenience")
 	(:url . "https://github.com/leoliu/ack-el"))])
  (ada-mode .
+<<<<<<< HEAD
 	   [(5 1 8)
 	    ((wisi
 	      (1 1 1))
+=======
+	   [(5 1 6)
+	    ((wisi
+	      (1 0 6))
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	     (cl-lib
 	      (0 4))
 	     (emacs
@@ -65,7 +71,11 @@
 			((:url . "http://www.gnuvola.org/software/aa2u/")
 			 (:keywords "ascii" "unicode" "box-drawing"))])
  (auctex .
+<<<<<<< HEAD
 	 [(11 88 6)
+=======
+	 [(11 88)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	  nil "Integrated environment for *TeX*" tar
 	  ((:url . "http://www.gnu.org/software/auctex/"))])
  (aumix-mode .
@@ -73,6 +83,7 @@
 	      nil "run the aumix program in a buffer" single
 	      ((:url . "http://user42.tuxfamily.org/aumix-mode/index.html")
 	       (:keywords "multimedia" "mixer" "aumix"))])
+<<<<<<< HEAD
  (auto-overlays .
 		[(0 10 9)
 		 nil "Automatic regexp-delimited overlays" tar
@@ -96,6 +107,8 @@
 	      "Hunt down errors in elisp files" single
 	      ((:url . "http://github.com/Malabarba/elisp-bug-hunter")
 	       (:keywords "lisp"))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (caps-lock .
 	    [(1 0)
 	     nil "Caps-lock as a minor mode" single
@@ -108,11 +121,14 @@
 	 "Play chess in GNU Emacs" tar
 	 ((:keywords "games")
 	  (:url . "http://elpa.gnu.org/packages/chess.html"))])
+<<<<<<< HEAD
  (cl-generic .
 	     [(0 2)
 	      nil "Forward cl-generic compatibility for Emacs<25" single
 	      ((:url . "http://elpa.gnu.org/packages/cl-generic.html")
 	       (:keywords))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (cl-lib .
 	 [(0 5)
 	  nil "Properly prefixed CL functions and macros" single
@@ -124,7 +140,11 @@
 	       ((:url . "http://github.com/defunkt/coffee-mode")
 		(:keywords "coffeescript" "major" "mode"))])
  (company .
+<<<<<<< HEAD
 	  [(0 8 12)
+=======
+	  [(0 8 7)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	   ((emacs
 	     (24 1))
 	    (cl-lib
@@ -132,6 +152,7 @@
 	   "Modular text completion framework" tar
 	   ((:keywords "abbrev" "convenience" "matching")
 	    (:url . "http://company-mode.github.io/"))])
+<<<<<<< HEAD
  (company-statistics .
 		     [(0 1 1)
 		      ((emacs
@@ -150,6 +171,8 @@
 		    "Highlight by scope" single
 		    ((:url . "https://github.com/jacksonrayhamilton/context-coloring")
 		     (:keywords "convenience" "faces" "tools"))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (crisp .
 	[(1 3 4)
 	 nil "CRiSP/Brief Emacs emulator" single
@@ -191,7 +214,11 @@
 	     ((:url . "http://www.dr-qubit.org/emacs.php")
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
+<<<<<<< HEAD
 	  [(1 7 0)
+=======
+	  [(1 6 0)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	   ((cl-lib
 	     (0 2)))
 	   "Highlight uncommitted changes" tar
@@ -271,7 +298,11 @@
 	   ((:url . "http://elpa.gnu.org/packages/flylisp.html")
 	    (:keywords))])
  (ggtags .
+<<<<<<< HEAD
 	 [(0 8 9)
+=======
+	 [(0 8 6)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	  ((emacs
 	    (24))
 	   (cl-lib
@@ -280,7 +311,11 @@
 	  ((:url . "https://github.com/leoliu/ggtags")
 	   (:keywords "tools" "convenience"))])
  (gnorb .
+<<<<<<< HEAD
 	[(1 1 1)
+=======
+	[(1 0 1)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	 ((cl-lib
 	   (0 5)))
 	 "Glue code between Gnus, Org, and BBDB" tar
@@ -314,6 +349,7 @@
 	  nil "Incremental occur" single
 	  ((:url . "http://elpa.gnu.org/packages/ioccur.html")
 	   (:keywords))])
+<<<<<<< HEAD
  (iterators .
 	    [(0 1)
 	     ((emacs
@@ -321,13 +357,19 @@
 	     "Functions for working with iterators" single
 	     ((:url . "http://elpa.gnu.org/packages/iterators.html")
 	      (:keywords "extensions" "elisp"))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (javaimp .
 	  [(0 5)
 	   nil "Add and reorder Java import statements in Maven projects" single
 	   ((:url . "http://elpa.gnu.org/packages/javaimp.html")
 	    (:keywords "java" "maven" "programming"))])
  (jgraph-mode .
+<<<<<<< HEAD
 	      [(1 1)
+=======
+	      [(1 0)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	       ((cl-lib
 		 (0 5)))
 	       "Major mode for Jgraph files" single
@@ -393,11 +435,14 @@
 	 "Retrieve and decode METAR weather information" single
 	 ((:url . "http://elpa.gnu.org/packages/metar.html")
 	  (:keywords "comm"))])
+<<<<<<< HEAD
  (minibuffer-line .
 		  [(0 1)
 		   nil "Display status info in the minibuffer window" single
 		   ((:url . "http://elpa.gnu.org/packages/minibuffer-line.html")
 		    (:keywords))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (minimap .
 	  [(1 2)
 	   nil "Sidebar showing a \"mini-map\" of a buffer" single
@@ -423,7 +468,11 @@
 	      ((:url . "http://elpa.gnu.org/packages/nhexl-mode.html")
 	       (:keywords "data"))])
  (nlinum .
+<<<<<<< HEAD
 	 [(1 6)
+=======
+	 [(1 5)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	  nil "Show line numbers in the margin" single
 	  ((:url . "http://elpa.gnu.org/packages/nlinum.html")
 	   (:keywords "convenience"))])
@@ -447,7 +496,11 @@
 	    ((:url . "http://elpa.gnu.org/packages/omn-mode.html")
 	     (:keywords))])
  (org .
+<<<<<<< HEAD
       [(20150525)
+=======
+      [(20141103)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)
@@ -455,7 +508,11 @@
        ((:url . "http://elpa.gnu.org/packages/osc.html")
 	(:keywords "comm" "processes" "multimedia"))])
  (pabbrev .
+<<<<<<< HEAD
 	  [(4 2)
+=======
+	  [(4 1)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	   nil "Predictive abbreviation expansion" single
 	   ((:url . "http://elpa.gnu.org/packages/pabbrev.html")
 	    (:keywords))])
@@ -475,7 +532,11 @@
 	 ((:url . "http://www.dr-qubit.org/emacs.php")
 	  (:keywords "extensions" "data structures" "queue"))])
  (rainbow-mode .
+<<<<<<< HEAD
 	       [(0 11)
+=======
+	       [(0 10)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 		nil "Colorize color names in buffers" single
 		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
 		 (:keywords "faces"))])
@@ -494,11 +555,14 @@
 		  nil "restore original position after scrolling" single
 		  ((:url . "http://elpa.gnu.org/packages/scroll-restore.html")
 		   (:keywords "scrolling"))])
+<<<<<<< HEAD
  (seq .
       [(1 7)
        nil "Sequence manipulation functions" single
        ((:url . "http://elpa.gnu.org/packages/seq.html")
 	(:keywords "sequences"))])
+=======
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
  (shen-mode .
 	    [(0 1)
 	     nil "A major mode for editing shen source code" tar
@@ -510,7 +574,11 @@
 	     ((:url . "http://elpa.gnu.org/packages/sisu-mode.html")
 	      (:keywords "text" "processes" "tools"))])
  (sml-mode .
+<<<<<<< HEAD
 	   [(6 7)
+=======
+	   [(6 5)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	    nil "Major mode for editing (Standard) ML" single
 	    ((:url . "http://elpa.gnu.org/packages/sml-mode.html")
 	     (:keywords "sml"))])
@@ -555,7 +623,11 @@
 	((:url . "http://www.dr-qubit.org/emacs.php")
 	 (:keywords "extensions" "matching" "data structures tnfa" "nfa" "dfa" "finite state automata" "automata" "regexp"))])
  (temp-buffer-browse .
+<<<<<<< HEAD
 		     [(1 4)
+=======
+		     [(1 3)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 		      nil "temp buffer browse mode" single
 		      ((:url . "http://elpa.gnu.org/packages/temp-buffer-browse.html")
 		       (:keywords "convenience"))])
@@ -597,7 +669,11 @@
 		   nil "Unicode confusables table" tar
 		   ((:url . "http://elpa.gnu.org/packages/uni-confusables.html"))])
  (vlf .
+<<<<<<< HEAD
       [(1 7)
+=======
+      [(1 6)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
        nil "View Large Files" tar
        ((:keywords "large files" "utilities")
 	(:url . "https://github.com/m00natic/vlfi"))])
@@ -619,7 +695,11 @@
 	      ((:keywords "http" "server" "network")
 	       (:url . "https://github.com/eschulte/emacs-web-server"))])
  (websocket .
+<<<<<<< HEAD
 	    [(1 4)
+=======
+	    [(1 3)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	     nil "Emacs WebSocket client and server" tar
 	     ((:keywords "communication" "websocket" "server")
 	      (:url . "http://elpa.gnu.org/packages/websocket.html"))])
@@ -629,7 +709,11 @@
 	      ((:url . "http://elpa.gnu.org/packages/windresize.html")
 	       (:keywords "window"))])
  (wisi .
+<<<<<<< HEAD
        [(1 1 1)
+=======
+       [(1 0 6)
+>>>>>>> 41a7967a7df14ad2a94692cbe3fecdabe7744e6e
 	((cl-lib
 	  (0 4))
 	 (emacs

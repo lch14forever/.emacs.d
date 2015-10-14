@@ -21,6 +21,7 @@
  '(ansi-color-names-vector (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
  '(background-color "#002b36")
  '(background-mode dark)
+ '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
@@ -127,6 +128,7 @@
 ;; (require 'ess-eldoc)
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
 (setq ess-ask-for-ess-directory nil) ;otherwise you are prompted each time you start an interactive R session
+
 (add-to-list 'auto-mode-alist '("\.rscript$" . R-mode))
 
 ;;*******************Perl*******************
@@ -197,6 +199,14 @@
  python-shell-completion-string-code
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;To load python templates
+(add-hook 'find-file-hooks 'maybe-load-template)
+(defun maybe-load-template ()
+  (interactive)
+  (when (and
+         (string-match "\\.py$" (buffer-file-name))
+         (eq 1 (point-max)))
+    (insert-file "~/.emacs.d/templates/template.py")))
 
 
 
