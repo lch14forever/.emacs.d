@@ -200,7 +200,22 @@
  python-shell-completion-string-code
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;; indentation mode 
+(require 'highlight-indentation)
+(set-face-background 'highlight-indentation-face "#bfafb2")
+(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
 
+(add-hook 'python-mode-hook 'highlight-indentation-mode)
+(defun aj-toggle-fold ()
+  "Toggle fold all lines larger than indentation on current line"
+  (interactive)
+  (let ((col 1))
+    (save-excursion
+      (back-to-indentation)
+      (setq col (+ 1 (current-column)))
+      (set-selective-display
+       (if selective-display nil (or col 1))))))
+(global-set-key "\C-ci" 'aj-toggle-fold)
 
 ;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
