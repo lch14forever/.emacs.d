@@ -1,0 +1,23 @@
+#!/mnt/software/bin/Rscript-3.1.2
+
+library(getopt)
+
+spec <- matrix(c(
+    'help','h',0,'logical','Show this help information',
+    'variable','v',1,'character','character variable',
+    'logical', 'l', 1, 'logical', 'logical variable',
+    ), byrow=T, ncol=3)
+
+opt = getopt(spec);
+
+usage_message <- 'This is an Rscript template.\n'
+if ( !is.null(opt$help) ) {
+    cat(usage_message)
+    cat(getopt(spec, usage=TRUE));
+    q(status=1);
+}
+#set some reasonable defaults for the options that are needed,
+#but were not specified.
+if ( is.null(opt$variable ) ) {opt$variable = 1}
+if ( is.null(opt$logical ) ) { opt$logical = TRUE }
+
