@@ -84,6 +84,13 @@
   (set-mark (line-beginning-position)))
 
 (global-set-key (kbd "C-`") 'select-current-line)
+
+;;***************yasnippet********************
+(require 'yasnippet)
+;; (yas-global-mode 1)
+(yas-reload-all)
+(add-hook 'c-mode-hook #'yas-minor-mode)
+
 ;;###################################Dired file system################################
 (setq wdired-allow-to-change-permissions t)
 
