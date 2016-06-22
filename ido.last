@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/lichenhao/Documents/" . "9.9/")
+ ("/home/lichenhao/.emacs.d/elpa/" . "org/")
+ ("/home/lichenhao/.emacs.d/" . "elpa/")
+ ("/home/lichenhao/" . "Documents/")
  ("/home/lich/scripts/" . "misc-scripts/")
  ("/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/1data_gen/test/0shuffled/" . "3cclasso/")
  ("/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/1data_gen/test/" . "0shuffled/")
@@ -12,7 +16,7 @@
  ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/" . "6rebacca/")
  ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/simulations/" . "scripts/")
  ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/" . "paper/")
- ("/home/" . "lich/")
+ ("/home/" . "lichenhao/")
  ("/mnt/projects/sunm/others/human3/" . "scripts/")
  ("/home/lich/projects_backup/skinmicro/" . "metaphlan/")
  ("/home/lich/projects_backup/" . "skinmicro/")
@@ -21,6 +25,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/lichenhao/.emacs.d/"
+ "/home/lichenhao/test/"
  "/home/lich/.emacs.d/"
  "/home/lich/"
  "/mnt/projects/lich/dream_challenge/rollingcircle/scripts/"
@@ -53,6 +59,8 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
+ "test.pl"
+ "test.org"
  "test.rscript"
  "test.rscipt"
  "test2.py"
@@ -60,12 +68,28 @@
  "segment.py"
  "find_unit.py"
  "coverage_ana.r"
- "tmp"
- "merge_tables.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/lichenhao/Documents/9.9/" (22056 20874 100313 917000) "9.9.org" "#9.9.org#" "./" "../")
+
+ ("/home/lichenhao/test/" (22378 7183 623935 430000) "gatb-core-1.0.5-Linux/" "network/" "vzf" "gi_751143718.fasta" "test.c" "./" "nv0002_342176430.fasta" "nanopore.dat~" "test.sh~" "nv0006_2465116.fasta" "LoRDEC-0.4/" "1_nv0001_551460472.fasta" "LoRDEC-0.4.tar.gz" "lbimproved/" "fastdtw-0.2.0/" "rigraph-release-0.7.zip" "graphmap/" "entrez_search.ipynb" "test.py~" "test.fasta" "GISNB474_301115_shearedrca_5022_1_ch100_file3_strand.fast5" "gatb-core-1.0.5-Linux.tar.gz" "1_nv0004_342176411.fasta" "1_nv0003_342176412.fasta" "nanopore.dat" "FastDTW-1.1.0/" "1_nv0002_342176430.fasta" "test.py" "1_nv0006_2465116.fasta" "1_nv0005_2465117.fasta" "gi_751143718.gbk" "FastDTW-1.1.0.zip" ".ipynb_checkpoints/" "poretools/" "../" "rigraph-release-0.7/" "test.sh" "nanopore.r" "nv0003_342176412.fasta" "nv0004_342176411.fasta" "nv0005_2465117.fasta" "nanopore.r~" "nv0001_551460472.fasta" "igraph.0.7.1.tgz")
+
+ ("/home/lichenhao/.emacs.d/elpa/org/" (22045 46581 900248 147000) "ox-icalendar.el" "ob-screen.el" "ob-sqlite.elc" "org-bibtex.el" "ob-lilypond.elc" "org-id.el" "ox-latex.el" "org-feed.elc" "ob-mscgen.el" "org-install.el" "ob-keys.el" "org-irc.elc" "org-crypt.el" "org-plot.elc" "org-entities.el" "ob-exp.el" "org-gnus.el" "ox-reveal.el" "ob-python.elc" "org-autoloads.el" "ob-tangle.elc" "ox-org.el" "org-compat.elc" "org-docview.elc" "org-faces.el" "org-datetree.el" "org-protocol.elc" "org-gnus.elc" "ox-md.el" "org-macro.elc" "org-inlinetask.el" "ob-exp.elc" "ox-html.elc" "ob.elc" "org-habit.elc" "ob-asymptote.el" "org-plot.el" "org" "ox-man.elc" "ob-perl.el" "org-bbdb.elc" "org-colview.el" "ox-html.el" "ob-makefile.elc" "ox-md.elc" "etc/" "ob-picolisp.elc" "ob-shen.el" "ob-R.elc" "ob-haskell.elc" "org-faces.elc" "org-rmail.el" "org-info.elc" "ob-sql.el" "org-agenda.el" "ox-org.elc" "ox-odt.elc" "org-mhe.elc" "ob-ledger.elc" "org-capture.elc" "org-mouse.el" "org-timer.el" "org-pcomplete.elc" "org-pcomplete.el" "ob-ruby.el" "ob-C.elc" "org-mobile.elc" "org-capture.el" "ob-latex.el" "org-table.elc" "org-table.el" "org-crypt.elc" "org-attach.el" "org-colview.elc" "ob-tangle.el" "ox-latex.elc" "ob-perl.elc" "ob-plantuml.elc" "org-irc.el" "org-macs.elc" "org-id.elc" "ob-dot.el" "ob-lisp.el" "ox-texinfo.el" "ob-picolisp.el" "org-loaddefs.el" "ob-table.el" "ob-haskell.el" "org-docview.el" "org-mobile.el" "ob-matlab.elc" "ob-fortran.elc" "ob-eval.el" "ob-awk.elc" "ob-awk.el" "org-mouse.elc" "ob-io.elc" "ox-texinfo.elc" "ob-emacs-lisp.elc" "ob-eval.elc" "ob-scheme.elc" "ob-plantuml.el" "ob-sh.el" "ob-js.el" "org-ctags.el" "ox-icalendar.elc" "ox-publish.el" "ob-core.elc" "ob-scheme.el" "ox.elc" "org-attach.elc" "ob-emacs-lisp.el" "org-footnote.el" "ob-C.el" "ob-mscgen.elc" "ob-ditaa.el" "org-element.elc" "ob-sass.elc" "ob-css.el" "org.elc" "ob-org.elc" "ob-makefile.el" "ob-asymptote.elc" "ob-matlab.el" "org-inlinetask.elc" "org-element.el" "org-w3m.el" "ob-shen.elc" "ob-calc.elc" "ob-octave.elc" "ob-ocaml.elc" "ob-clojure.elc" "org.el" "ox-ascii.el" "ob-latex.elc" "org-ctags.elc" "org-macs.el" "ob-dot.elc" "org-footnote.elc" "org-list.elc" "ob-io.el" "ob-css.elc" "ox-beamer.el" "ob-lisp.elc" "org-feed.el" "ob-R.el" "org-eshell.el" "ob-sqlite.el" "org-clock.elc" "ob-python.el" "ox-publish.elc" "org-clock.el" "ob-octave.el" "org-w3m.elc" "ob-lob.el" "ob-core.el" "org-indent.elc" "ob-ocaml.el" "ob-ruby.elc" "ob-screen.elc" "org-src.el" "ob-org.el" "ob-gnuplot.el" "org-info.el" "ob-lilypond.el" "ob-maxima.elc" "org-archive.elc" "ox-odt.el" "ob.el" "ob-ledger.el" "ob-sql.elc" "org-mhe.el" "ox-beamer.elc" "ob-comint.el" "ob-sh.elc" "org-agenda.elc" "ob-scala.elc" "ox-man.el" "ob-clojure.el" "dir" "org-list.el" "org-pkg.el" "ob-ref.elc" "README_ELPA" "org-datetree.elc" "ob-ref.el" "ob-java.elc" "org-entities.elc" "ob-gnuplot.elc" "org-compat.el" "orgcard.pdf" "ob-calc.el" "org-bbdb.el" "org-indent.el" "org-rmail.elc" "org-src.elc" "org-habit.el" "org-bibtex.elc" "org-timer.elc" "ox.el" "org-protocol.el" "ob-ditaa.elc" "ob-table.elc" "ob-scala.el" "ox-ascii.elc" "ob-js.elc" "ob-java.el" "ob-keys.elc" "ob-lob.elc" "ob-comint.elc" "ob-fortran.el" "org-macro.el" "org-pkg.elc" "ob-maxima.el" "ob-sass.el" "org-eshell.elc" "org-version.el" "COPYING" "org-archive.el" "../" "./")
+
+ ("/home/lichenhao/.emacs.d/elpa/" (22378 7655 463952 277000) "anything-match-plugin-1.27/" "auto-complete-1.4/" "./" "org/" "cljdoc-0.1.0/" "anything-1.287/" "clojurescript-mode-0.5/" "undo-tree-0.6.3/" "clj-refactor-0.2.0/" "org-20160620.signed" "gnupg/" "dash-1.4.0/" "snakemake-mode-readme.txt" "clojure-test-mode-2.1.0/" "color-theme-sanityinc-solarized-2.25/" "clojure-mode-2.1.0/" "htmlize-1.39/" "org-ac-readme.txt" "0blayout-readme.txt" "ac-nrepl-0.20/" "levenshtein-1.0/" "project-mode-1.0/" "color-theme-wombat+-0.0.2/" "popup-0.5/" "yasnippet-0.8.0/" "archives/" "cljsbuild-mode-0.2.0/" "clj-mode-0.9/" "load-theme-buffer-local-0.0.2/" "rainbow-delimiters-1.3.4/" "groovy-mode-201203310931/" "clojure-project-mode-1.0/" "flymake-0.4.16/" "nrepl-0.1.7/" "s-1.6.1/" "../" "color-theme-solarized-20120301/" "color-theme-6.6.1/" "ess-smart-underscore-readme.txt")
+
+ ("/home/lichenhao/.emacs.d/" (22378 7732 339955 22000) "README.md" ".git/" "./" ".gitignore" "templates/" "tramp" "ido.last~" "mypackages/" "_emacs23_init.el" ".Rhistory" "auto-save-list/" ".org-id-locations" "additionalsettings.org" "ido.last" "init.el" "../" "elpa/" "ac-comphist.dat")
+
+ ("/home/" (21521 35872 712997 793000) "lost+found/" "./" "../" "lichenhao/")
+
+ ("/home/lichenhao/Documents/" (22378 7127 787933 436000) "web-org/" "CSI/" "cytoscape-2.8.3/" "reveal-example.html" "RNA-seq/" "./" "org/" "seminars.org" "beamer/" "mBio-2016-Tsai-.pdf" "zhouli/" "p253-datar.pdf" "org-reveal-update/" "reveal-example.org" "somatic_mutation_meta/" "orgtest/" "GO" "caichengqi/" "reveal.js/" "LAMP/" "mysite/" "web-public_html/" "EuropeanWomenKEGG_annotated.csv" ".ipynb_checkpoints/" "gLV/" "orgguide.pdf" "gender_corrected_allele_counts_from_VCF_debugging.py" "EuropeanWomenKEGG.txt" "9.9/" "../" "interbact/")
+
+ ("/home/lichenhao/" (22378 7127 787933 436000) "Documents/" ".bash_history" ".Xmodmap" "src/" "R/" "timeseries.papers.txt" "rebacca_08_07_2015.odp" ".python_history" ".pip/" ".xsession-errors" ".xsession-errors.old" "./" ".local/" ".compiz/" ".gconf/" ".cache/" "journal_club_11112015.odp" "template_query_entrez.py" "highlight-indentation.el" ".juniper_networks/" ".lesshst" ".config/" "examples.desktop" "Templates/" "semi_lazy.xlsx" ".gstreamer-0.10/" ".gnome/" ".ssh/" "train_mRMR.R" "Public/" ".Xauthority" ".karaf/" "Desktop/" ".dbus/" "hs_err_pid2454.log" "Music/" ".mozilla/" ".ido.last~" "test/" ".Rhistory" "mBio-2015-Zhou-.pdf" ".subversion/" ".gnupg/" ".pki/" ".texmf-var/" ".gitconfig" "emacs_d/" ".ICEauthority" ".grive" ".cytoscape/" ".kingsoft/" ".bashrc" "missfont.log" ".dmrc" ".dropbox/" "CytoscapeConfiguration/" ".install4j" ".profile" "skin_strain/" "Dropbox/" "Downloads/" "Untitled 1.odp" ".Foxit/" ".pam_environment" ".bash_logout" ".xournal/" "npm-debug.log" ".bash_aliases" ".thunderbird/" ".ipynb_checkpoints/" ".gnome2/" ".kde/" ".java/" ".~lock.journal_club_11112015.odp#" ".xinputrc" "IGC.KO.normalization.ProfileTable.gz" ".emacs.d/" "Videos/" ".bash_profile" "../" ".dropbox-dist/" "sva.r" "tmp/" ".ido.last" ".npm/" ".ipython/" "Cytoscape_v3.2.1/" "s13059-014-0527-7-s1.pdf" "Pictures/")
+
+ ("/home/lichenhao/Documents/orgtest/" (22378 7007 975929 158000) ".fdb_latexmk" "./" "myfirst.org~" "myfirst.html" "references.bib" "BoxplotSummary.png" "cc.org" "myfirst.pdf" "myfirst.org" ".aux" "lichenhao.sty" "myfirst.html~" "myfirst.tex" "myfirst.tex~" "libpeerconnection.log" "../")
+
  ("/home/lich/.emacs.d/" (22045 45701 127371 643000) ".Rhistory" "init.el" "mypackages/" ".git/" "_emacs23_init.el" "elpa/" "ido.last~" ".gitignore" "auto-save-list/" "ido.last" "ac-comphist.dat" "additionalsettings.org" "tramp" "templates/" "session.1070971deaff64b143141171997057438900000032770060" "bookmarks" "README.md" ".org-id-locations" "../" "./")
 
  ("/home/lich/" (22045 45404 214615 670000) ".k5login" ".tramp_history" ".lesshst" "ncbi/" ".pathway-tools/" "notes.org~" "percol/" "project/" ".gnupg/" "Dowloads/" "ref/" "init.el" ".fontconfig/" ".conda/" "CytoscapeConfiguration/" ".install4j" "correlation_methods/" ".ido.last~" ".cache/" "AIC-prefs/" ".percol.d/" ".com.zerog.registry.xml" ".jswingreader/" "scripts/" ".cpanm/" "R/" ".bashrc" ".ssh/" ".java/" ".history" ".ipython/" "notes.org" ".joe_state" ".cytoscape/" "PathoLogic-Console-Log-2015-05-27" ".pki/" ".InstallAnywhere/" ".bpipedb/" ".subversion/" "ncbi_error_report.xml" "local/" ".jalview_properties" ".gconf/" ".config/" "tmp/" ".bash_history" ".gradle/" ".Xauthority" ".bash_logout" ".matplotlib/" ".bash_profile" "ong_et_all_2013.tgz" ".emacs.d/" ".#.ido.last" ".vamsas/" "projects_backup/" ".bpipe/" "../" "./")
@@ -85,8 +109,6 @@
  ("/mnt/projects/lich/dream_challenge/interaction/finalized/test/" (22030 13131 648884 705000) "hmp_shotgun/" "1gLVsim/" "colshuffled.s0.3.box.pdf" "human_timeseries.zip" "hmp16Sv35/" ".Rhistory" "colshuffled.s0.2.violin.pdf" "metaphlan.gut.HMP_MH.healthy.sp.thre0.05.csv" "metaphlan.gut.HMP_MH.healthy.sp.tsv" "rowshuffled.s0.2.box.pdf" "colshuffled.s0.1.violin.pdf" "eval_nc.boxplot.r~" "colshuffled.s0.3.violin.pdf" "2realData/" "0colShuffled/" "colshuffled.s0.1.box.pdf" "eval_nc.boxplot.r" "gold_standard/" "rowshuffled.s0.1.violin.pdf" "0rowShuffled/" "rowshuffled.s0.3.box.pdf" "metaphlan.gut.HMP_MH.healthy.sp.thre0.05_filter-c1-s0.1.tsv" "eval_nc.violin.r~" "trash/" "colshuffled.s0.2.box.pdf" "rowshuffled.s0.2.violin.pdf" "eval_nc.violin.r" "rowshuffled.s0.3.violin.pdf" "shuffle.r" "est_par.r" "eval_functions.r" "rowshuffled.s0.1.box.pdf" "time_series_genome_bio/" "../" "./")
 
  ("/home/lich/projects_backup/minter_figs/chenhao_figure_data/" (22030 12778 362137 576000) "fig1.png" "fig2.png" "fig.r" "ROC data/" "fisher_vs_fisher+inibit.r~" "#fig.r#" ".#fig.r" "../" "./")
-
- ("/home/" (22035 30891 552475 379000) "mhng/" "sheny/" "chothanisp/" "simks/" "zhangt/" "karlssonnnv/" "selvarajpr/" "cukuroglue/" "lich/" "../" "./")
 
  ("/mnt/projects/" (22035 31195 193542 876000) "douj/" "wangcl/" "chenh1/" "karlssonnnv/" "sheny/" "cyang/" "zhaiww1/" "gokej/" "mhng/" "lich/" "wlwtan/" "jcschung/" "sunm/" "../" "./")
 

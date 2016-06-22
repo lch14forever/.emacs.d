@@ -6,6 +6,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 ;;#######################################Mini buffer###################################
@@ -128,11 +130,9 @@
 
 ;;********************R*********************
 ;;ESS config
-;; (add-to-list 'load-path "/home/lich/.emacs.d/mypackages/ESS/lisp/")
+(add-to-list 'load-path "~/.emacs.d/mypackages/ESS/lisp/")
 (load "ess-site")
 
-;; (require 'ess-site)
-;; (require 'ess-eldoc)
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
 (setq ess-ask-for-ess-directory nil) ;otherwise you are prompted each time you start an interactive R session
 
@@ -303,6 +303,7 @@
 
 
 ;;############################Org mode##############################
+(add-to-list 'load-path "~/.emacs.d/elpa/org")
  (global-set-key "\C-cl" 'org-store-link)
  (global-set-key "\C-ca" 'org-agenda)
  (global-set-key "\C-cb" 'org-iswitchb)
@@ -314,9 +315,10 @@
 (add-hook 'org-mode-hook (lambda () (setq ispell-parser 'tex)))
 
  ;;syntax highlighting within Org 
- (setq org-src-fontify-natively t)
- (require 'org-latex)
- (require 'org-special-blocks) ;; #+begin_foo #+end_foo
+(setq org-src-fontify-natively t)
+;; no longer exist after org 8
+;; (require 'org-latex)
+;; (require 'org-special-blocks) ;; #+begin_foo #+end_foo
 
 ;;babel to evaluate the code
  (org-babel-do-load-languages
