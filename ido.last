@@ -25,6 +25,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/lichenhao/"
  "/home/lichenhao/.emacs.d/"
  "/home/lichenhao/test/"
  "/home/lich/.emacs.d/"
@@ -58,6 +59,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "Snakefile"
  "init.el"
  "test.pl"
  "test.org"
@@ -67,12 +69,13 @@
  "filter_best_match.py"
  "segment.py"
  "find_unit.py"
- "coverage_ana.r"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/lichenhao/.emacs.d/" (22378 8545 899984 71000) "README.md" ".git/" "./" ".gitignore" "templates/" "tramp" "ido.last~" "mypackages/" "_emacs23_init.el" ".Rhistory" "auto-save-list/" ".org-id-locations" "additionalsettings.org" "ido.last" "init.el" "../" "elpa/" "ac-comphist.dat")
+ ("/home/lichenhao/" (22378 10058 513559 75000) "Documents/" ".bash_history" ".Xmodmap" "src/" "R/" "timeseries.papers.txt" "rebacca_08_07_2015.odp" ".python_history" ".pip/" ".xsession-errors" ".xsession-errors.old" "./" ".local/" ".compiz/" ".gconf/" ".cache/" "journal_club_11112015.odp" "template_query_entrez.py" "highlight-indentation.el" ".juniper_networks/" ".lesshst" ".config/" "examples.desktop" "Templates/" "semi_lazy.xlsx" ".gstreamer-0.10/" ".gnome/" ".ssh/" "train_mRMR.R" "Public/" ".Xauthority" ".karaf/" "Desktop/" ".dbus/" "hs_err_pid2454.log" "Music/" ".mozilla/" ".ido.last~" "test/" ".Rhistory" "mBio-2015-Zhou-.pdf" ".subversion/" ".gnupg/" ".pki/" ".texmf-var/" ".gitconfig" "emacs_d/" ".ICEauthority" ".grive" ".cytoscape/" ".kingsoft/" "Snakefile" ".bashrc" "missfont.log" ".dmrc" ".dropbox/" "CytoscapeConfiguration/" ".install4j" ".profile" "skin_strain/" "Dropbox/" "Downloads/" "Untitled 1.odp" ".Foxit/" ".pam_environment" ".bash_logout" ".xournal/" "npm-debug.log" ".bash_aliases" ".thunderbird/" ".ipynb_checkpoints/" ".gnome2/" ".kde/" ".java/" ".~lock.journal_club_11112015.odp#" ".xinputrc" "IGC.KO.normalization.ProfileTable.gz" ".emacs.d/" "Videos/" ".bash_profile" "../" "Snakefile~" ".dropbox-dist/" "sva.r" "tmp/" ".ido.last" ".npm/" ".ipython/" "Cytoscape_v3.2.1/" "s13059-014-0527-7-s1.pdf" "Pictures/")
+
+ ("/home/lichenhao/.emacs.d/" (22378 9892 877553 160000) "README.md" ".git/" "./" ".gitignore" "templates/" "tramp" "ido.last~" "mypackages/" "_emacs23_init.el" ".Rhistory" "auto-save-list/" ".org-id-locations" "additionalsettings.org" "ido.last" "init.el" "../" "elpa/" "ac-comphist.dat")
 
  ("/home/lichenhao/Documents/9.9/" (22056 20874 100313 917000) "9.9.org" "#9.9.org#" "./" "../")
 
@@ -85,8 +88,6 @@
  ("/home/" (21521 35872 712997 793000) "lost+found/" "./" "../" "lichenhao/")
 
  ("/home/lichenhao/Documents/" (22378 7127 787933 436000) "web-org/" "CSI/" "cytoscape-2.8.3/" "reveal-example.html" "RNA-seq/" "./" "org/" "seminars.org" "beamer/" "mBio-2016-Tsai-.pdf" "zhouli/" "p253-datar.pdf" "org-reveal-update/" "reveal-example.org" "somatic_mutation_meta/" "orgtest/" "GO" "caichengqi/" "reveal.js/" "LAMP/" "mysite/" "web-public_html/" "EuropeanWomenKEGG_annotated.csv" ".ipynb_checkpoints/" "gLV/" "orgguide.pdf" "gender_corrected_allele_counts_from_VCF_debugging.py" "EuropeanWomenKEGG.txt" "9.9/" "../" "interbact/")
-
- ("/home/lichenhao/" (22378 7127 787933 436000) "Documents/" ".bash_history" ".Xmodmap" "src/" "R/" "timeseries.papers.txt" "rebacca_08_07_2015.odp" ".python_history" ".pip/" ".xsession-errors" ".xsession-errors.old" "./" ".local/" ".compiz/" ".gconf/" ".cache/" "journal_club_11112015.odp" "template_query_entrez.py" "highlight-indentation.el" ".juniper_networks/" ".lesshst" ".config/" "examples.desktop" "Templates/" "semi_lazy.xlsx" ".gstreamer-0.10/" ".gnome/" ".ssh/" "train_mRMR.R" "Public/" ".Xauthority" ".karaf/" "Desktop/" ".dbus/" "hs_err_pid2454.log" "Music/" ".mozilla/" ".ido.last~" "test/" ".Rhistory" "mBio-2015-Zhou-.pdf" ".subversion/" ".gnupg/" ".pki/" ".texmf-var/" ".gitconfig" "emacs_d/" ".ICEauthority" ".grive" ".cytoscape/" ".kingsoft/" ".bashrc" "missfont.log" ".dmrc" ".dropbox/" "CytoscapeConfiguration/" ".install4j" ".profile" "skin_strain/" "Dropbox/" "Downloads/" "Untitled 1.odp" ".Foxit/" ".pam_environment" ".bash_logout" ".xournal/" "npm-debug.log" ".bash_aliases" ".thunderbird/" ".ipynb_checkpoints/" ".gnome2/" ".kde/" ".java/" ".~lock.journal_club_11112015.odp#" ".xinputrc" "IGC.KO.normalization.ProfileTable.gz" ".emacs.d/" "Videos/" ".bash_profile" "../" ".dropbox-dist/" "sva.r" "tmp/" ".ido.last" ".npm/" ".ipython/" "Cytoscape_v3.2.1/" "s13059-014-0527-7-s1.pdf" "Pictures/")
 
  ("/home/lichenhao/Documents/orgtest/" (22378 7007 975929 158000) ".fdb_latexmk" "./" "myfirst.org~" "myfirst.html" "references.bib" "BoxplotSummary.png" "cc.org" "myfirst.pdf" "myfirst.org" ".aux" "lichenhao.sty" "myfirst.html~" "myfirst.tex" "myfirst.tex~" "libpeerconnection.log" "../")
 
