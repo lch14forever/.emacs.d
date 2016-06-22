@@ -224,6 +224,17 @@
        (if selective-display nil (or col 1))))))
 (global-set-key "\C-ci" 'aj-toggle-fold)
 
+; snake-mode
+(add-to-list 'auto-mode-alist '("Snakefile" . snake-mode))
+(defun insert-tab ()
+  (interactive)
+  (insert "     ")) ; a "real" tab, i.e., what "C-q \t" would give
+(define-minor-mode snake-mode
+  "Snakemake."
+  :lighter " snake-make"
+     (python-mode)
+     (setq indent-line-function 'insert-tab))
+
 ;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
 (setq auto-mode-alist (cons '("\\.clj$" . clojure-mode) auto-mode-alist))
