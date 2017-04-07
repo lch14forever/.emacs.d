@@ -1,6 +1,12 @@
 # sessions
 session.*
 
+elpa/archives/gnu/archive-contents
+elpa/archives/gnu/archive-contents.signed
+elpa/archives/marmalade/archive-contents
+elpa/archives/melpa/archive-contents
+ido.last
+
 auto-save-list/
 *.dat
 

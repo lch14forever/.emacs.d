@@ -5,7 +5,7 @@
 ;;package repo
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
@@ -92,6 +92,14 @@
 ;; (yas-global-mode 1)
 (yas-reload-all)
 (add-hook 'c-mode-hook #'yas-minor-mode)
+
+;;***************helm and helm-swoop********************
+(global-set-key (kbd "M-s") 'helm-swoop)
+(require 'helm-config)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
 
 ;;###################################Dired file system################################
 (setq wdired-allow-to-change-permissions t)
