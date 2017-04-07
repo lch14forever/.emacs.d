@@ -1,3 +1,4 @@
+
 ;;###############################General settings######################################
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
 (setq user-mail-address "lichenhao.sg@gmail.com"
@@ -5,7 +6,9 @@
 ;;package repo
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 ;;#######################################Mini buffer###################################
@@ -17,8 +20,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#fdf6e3"))
  '(background-color "#002b36")
  '(background-mode dark)
  '(blink-cursor-mode nil)
@@ -26,15 +31,39 @@
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
  '(custom-enabled-themes (quote (adwaita)))
- '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+ '(custom-safe-themes
+   (quote
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
  '(fci-rule-color "#eee8d5")
  '(font-use-system-font t)
  '(foreground-color "#839496")
  '(org-startup-truncated nil)
+ '(package-selected-packages
+   (quote
+    (helm-swoop helm undo-tree sublimity snakemake-mode rainbow-delimiters org minimap matlab-mode load-theme-buffer-local htmlize groovy-mode flymake color-theme-wombat+ color-theme-solarized color-theme-sanityinc-solarized clojurescript-mode clojure-test-mode clojure-project-mode cljsbuild-mode cljdoc clj-refactor clj-mode anything-match-plugin anything ac-nrepl)))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
- '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#cb4b16") (60 . "#b58900") (80 . "#859900") (100 . "#2aa198") (120 . "#268bd2") (140 . "#d33682") (160 . "#6c71c4") (180 . "#dc322f") (200 . "#cb4b16") (220 . "#b58900") (240 . "#859900") (260 . "#2aa198") (280 . "#268bd2") (300 . "#d33682") (320 . "#6c71c4") (340 . "#dc322f") (360 . "#cb4b16"))))
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#cb4b16")
+     (60 . "#b58900")
+     (80 . "#859900")
+     (100 . "#2aa198")
+     (120 . "#268bd2")
+     (140 . "#d33682")
+     (160 . "#6c71c4")
+     (180 . "#dc322f")
+     (200 . "#cb4b16")
+     (220 . "#b58900")
+     (240 . "#859900")
+     (260 . "#2aa198")
+     (280 . "#268bd2")
+     (300 . "#d33682")
+     (320 . "#6c71c4")
+     (340 . "#dc322f")
+     (360 . "#cb4b16"))))
  '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -48,7 +77,8 @@
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
-
+;; font
+(set-face-attribute 'default nil :height 120)
 ;;color theme
 (require 'color-theme)
 (setq color-theme-is-global t)
@@ -84,6 +114,15 @@
   (set-mark (line-beginning-position)))
 
 (global-set-key (kbd "C-`") 'select-current-line)
+
+;;***************helm and helm-swoop********************
+(global-set-key (kbd "M-s") 'helm-swoop)
+(require 'helm-config)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+
 ;;###################################Dired file system################################
 (setq wdired-allow-to-change-permissions t)
 
@@ -123,7 +162,7 @@
 ;;ESS config
 (add-to-list 'load-path "/home/lich/.emacs.d/mypackages/ESS/lisp/")
 (load "ess-site")
-(setq-default inferior-R-program-name "R-3.1.2")
+(setq-default inferior-R-program-name "R-3.3.1")
 ;; (require 'ess-site)
 ;; (require 'ess-eldoc)
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
@@ -216,6 +255,7 @@
       (set-selective-display
        (if selective-display nil (or col 1))))))
 (global-set-key "\C-ci" 'aj-toggle-fold)
+
 
 ;;*****************Clojure and Lisp**************
 ;;clojure and nrepl mode
