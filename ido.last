@@ -2,6 +2,22 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/mayuan/Dropbox/PHD/thesis/" . "1_predicting_review/")
+ ("/scp:csb5@10.217.25.72:/home/csb5/database/Minion/Minion_softwares/" . "minion_live_basecall/")
+ ("/scp:lich@astar.nscc.sg:/home/users/astar/gis/lich/scratch/" . "final/")
+ ("/scp:lich@astar.nscc.sg:/home/users/astar/gis/lich/" . "scratch/")
+ ("/scp:lich@astar.nscc.sg:/home/users/astar/gis/" . "lich/")
+ ("/scp:csb5@10.217.25.72:/home/csb5/database/Minion/data/reads/N055_FLO-MIN107_SQK-LSK308/" . "fast5/")
+ ("/Users/mayuan/Programs/git-repos/" . "minion_live_basecall/")
+ ("/Users/mayuan/Programs/" . "test/")
+ ("/Users/mayuan/Dropbox/gis/" . "Microbial recovery machine learning/")
+ ("/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/Python_scripts/Lasso_Compositional/" . "src/")
+ ("/Users/mayuan/Documents/" . "MDSINE/")
+ ("/Users/mayuan/Dropbox/latex/" . "orgtemplate/")
+ ("/Users/mayuan/Dropbox/" . "latex/")
+ ("/Users/mayuan/.emacs.d/mypackages/" . "ESS/")
+ ("/Users/mayuan/.emacs.d/" . "mypackages/")
+ ("/Users/mayuan/" . ".emacs.d/")
  ("/home/lichenhao/MDSINE/" . "mdsine/")
  ("/home/lichenhao/Dropbox/gis/" . "labnotes/")
  ("/home/lichenhao/Dropbox/PHD/" . "CS2104/")
@@ -29,6 +45,36 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/mayuan/.emacs.d/"
+ "/Users/mayuan/Programs/"
+ "/Users/mayuan/Programs/git-repos/minion_live_basecall/"
+ "/Users/mayuan/Programs/test/"
+ "/Users/mayuan/Dropbox/PHD/thesis/1_predicting_review/"
+ "/Users/mayuan/Dropbox/PHD/thesis/latex/"
+ "/Users/mayuan/Dropbox/PHD/thesis/"
+ "/Users/mayuan/beem/"
+ "/Users/mayuan/Documents/"
+ "/scp:csb5@10.217.25.73:"
+ "/scp:csb5@10.217.25.72:/home/csb5/database/Minion/Minion_softwares/minion_live_basecall/"
+ "/scp:guest@10.217.25.72:"
+ "/scp:lich@astar.nscc.sg:/home/users/astar/gis/lich/scratch/final/"
+ "/scp:lich@astar.nscc.sg:/home/users/astar/gis/lich/"
+ "/scp:lich@astar.nscc.sg:/home/users/astar/gis/lich/beem/"
+ "/scp:lich@astar.nscc.sg:"
+ "/scp:csb5@10.217.25.72:"
+ "/scp:10.217.25.72:"
+ "/Users/mayuan/Programs/git-repos/transfer_nanopore_data/minion_live_basecall/"
+ "/scp:csb5@"
+ "/Users/mayuan/Programs/git-repos/transfer_nanopore_data/"
+ "/scp:csb5@10.217.25.72:/home/csb5/database/Minion/data/reads/N055_FLO-MIN107_SQK-LSK308/"
+ "/Users/mayuan/Programs/git-repos/poreduck/"
+ "/Users/mayuan/"
+ "/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/"
+ "/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/Python_scripts/Lasso_Compositional/"
+ "/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/Python_scripts/Lasso_Compositional/src/"
+ "/Users/mayuan/Documents/MDSINE/BEEM_MDSINE/data_cdiff/"
+ "/Users/mayuan/Documents/test/"
+ "/Users/mayuan/Dropbox/latex/orgtemplate/"
  "/home/lichenhao/.emacs.d/"
  "/home/lichenhao/MDSINE/cross_validation/data_cdiff/tmp/"
  "/home/lichenhao/tmp/"
@@ -49,48 +95,100 @@
  "/home/lich/.emacs.d/"
  "/home/lich/"
  "/mnt/projects/lich/dream_challenge/rollingcircle/scripts/"
- "/mnt/projects/lich/dream_challenge/rollingcircle/blast/"
- "/home/lich/scripts/misc-scripts/"
- "/home/lich/projects_backup/minter_figs/chenhao_figure_data/"
- "/mnt/projects/lich/dream_challenge/rollingcircle/reads/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/test/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/test/1gLVsim/"
- "/mnt/projects/lich/dream_challenge/rollingcircle/"
- "/home/lich/correlation_methods/"
- "/home/lich/scripts/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/filip/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/1data_gen/test/0shuffled/3cclasso/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/2realdata/3cclasso/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/scripts/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/1data_gen/"
- "/mnt/projects/lich/dream_challenge/interaction/finalized/1simulation/"
- "/mnt/projects/lich/dream_challenge/interaction/medusa_int/scripts/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/scripts/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/ensemble/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/6rebacca/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/simulations/scripts/"
- "/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/4CCLasso/"
- "/mnt/projects/sunm/others/human3/scripts/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  "init.el"
- "runMDSINE.m"
- "parameters.cfg"
- "test.org"
- "splineBiomassMCMC.m"
- "doBayesianInference.m"
- "calcNorms.m"
- "GetBiomassStd.m"
- "test.java"
- "executors.py"
+ "YelpAPI2.R"
+ "nanopore_watchdog.py"
+ "README.md"
+ "transfer_to_cluster.py"
+ "test_rice.r"
+ "review.org"
+ "PhDthesisPSnPDF.cls"
+ "nusthesis.sty"
+ "master.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/mayuan/.emacs.d/" (23116 15429 541553 37000) ".git/" "elpa/" "templates/" "additionalsettings.org" "network-security.data" ".org-id-locations" ".gitignore" "bookmarks" "_emacs23_init.el" "README.md" "init.el" "url/" "auto-save-list/" "ensime/" "mypackages/" "tramp" "ido.last~" "abbrev_defs" "eshell/" "ido.last" "snippets/" ".Rhistory" "ac-comphist.dat" "../" "./")
+
+ ("/Users/mayuan/Programs/" (23116 15513 984545 494000) "git-repos/" "XX-Net/" "ch/" "YelpAPI2.R" "#YelpAPI2.R#" "test/" ".DS_Store" ".Rhistory" "../" "./")
+
+ ("/Users/mayuan/Programs/git-repos/minion_live_basecall/" (23109 46613 878478 609000) ".git/" "run_albacore.sh" "cluster.yaml" ".gitignore" "mongo.yaml" "README.md" "transfer_to_cluster.py" "runApp/" "DOCKER_FILE" "nanopore_watchdog.py" ".DS_Store" "watchdog_shinyApp.png" "../" "./")
+
+ ("/Users/mayuan/" (23116 14151 169578 403000) "AnacondaProjects/" ".3T/" ".conda/" ".bash_history" ".putty/" ".gitconfig" ".cache/" ".continuum/" ".python_history" "Downloads/" ".Xauthority" ".bash_profile" ".rstudio-desktop/" ".rice_history" "Documents/" ".npm/" ".jupyter/" ".tldrc/" ".ipynb_checkpoints/" ".Trash/" ".screenrc" ".Rcache/" ".Rapp.history" "Dropbox/" "Applications/" "Movies/" ".ssh/" "beem/" ".anaconda/" ".ExperimentHub/" ".dropbox/" "Public/" "Google Drive/" "Programs/" ".bash_sessions/" ".node_repl_history" ".emacs.d/" "Parallels/" ".oracle_jre_usage/" ".lesshst" ".matplotlib/" "Library/" ".bioSyntax.rc" "Desktop/" ".ipython/" ".rnd" ".atom/" "Pictures/" ".bash_profile~" ".subversion/" ".sogouinput/" ".CFUserTextEncoding" ".R/" ".DS_Store" ".condarc" "Music/" ".config/" ".Rhistory" "anaconda/" "../" "./")
+
+ ("/Users/mayuan/Programs/test/" (23108 39968 910291 390000) ".N010.WatchDog_BK.pkl" ".N060.WatchDog_BK.pkl" ".N030.WatchDog_BK.pkl" ".N061.WatchDog_BK.pkl" "../" "./")
+
+ ("/Users/mayuan/Programs/git-repos/" (23101 5979 282385 473000) "ubuntu-latex-fonts/" "org-reveal/" "minion_live_basecall/" "mdsine/" "poreduck/" ".DS_Store" "example-models/" "mdsine.zip" "../" "./")
+
+ ("/Users/mayuan/Documents/" (23100 49103 46122 756000) "Mendeley/" "20171122_1058_N090_FLO-MIN107_SQK-LSK308/" "sankey.org~" "MY/" "TTSH_association_rule/" "MATLAB/" "body_data.xlsx" "myblogs/" "sankey.md" "sankey.org" "shower_time.xlsx" "MDSINE/" ".DS_Store" "lch14forever.github.io/" "blogs/" "../" "./")
+
+ ("/Users/" (23049 10513 739878 154000) "Shared/" "mayuan/" ".localized" "../" "./")
+
+ ("/Users/mayuan/beem/" (23053 14202 942339 418000) "time_series_meta.ipynb" ".git/" ".ipynb_checkpoints/" "isme.ipynb" "emFunctions.r" ".gitignore" "isme_analysis/" "README.md" "time_series_analysis/" "LICENSE" "../" "./")
+
+ ("/Users/mayuan/Dropbox/PHD/thesis/" (23053 46300 82017 475000) "7_/" "Rplots.pdf" "3_results/" "thesis-settings.tex" "pdflatex24453.fls" "1_predicting_review/" "nusthesis.sty" "5_conclusion/" "#master.tex#" ".fig1.pdf" "master.blg" "master.fls" "master.lot" "8_backmatters/" "thesis-settings.tex~" "master.lof" "master.bbl" "thesis-settings.aux" "_minted-master/" "master.org" "4_discussion/" "master.fdb_latexmk" "master.pdf" "latex/" "2_mm/" "master.org~" "master.tex" "fig1.pdf" ".DS_Store" "master.nlo" "0_frontmatter/" "6_/" "master.tex~" "../" "./")
+
+ ("/Users/mayuan/Dropbox/PHD/thesis/latex/" (23053 38990 514759 750000) "PhDthesisPSnPDF.cls" "PhDthesisPSnPDF.cls~" "../" "./")
+
+ ("/Users/mayuan/Dropbox/PHD/thesis/1_predicting_review/" (23053 46374 729515 318000) "xelatex25738.fls" "li_et_al_figure2.png" ".#intro.org" "li_et_al_figure1.png" "review.blg" "review.fls" "review.log" "review.aux" "review.org" "review.bbl" "review.pdf" "_minted-review/" "review.fdb_latexmk" "intro_tab1.png" "review.tex" ".DS_Store" "review.toc" "review.tex~" "review.out" "../" "./")
+
+ ("/Users/mayuan/Documents/myblogs/" (23079 51190 770827 978000) ".Rproj.user/" "themes/" "data/" ".git/" "config.toml" "myblogs.Rproj" "static/" ".gitignore" "public/" "content/" "archetypes/" "index.Rmd" "blogdown/" ".DS_Store" "draft/" ".Rhistory" "../" "./")
+
+ ("/Users/mayuan/Dropbox/" (23045 55849 0 0) "gis/" "toMY.org" "mdsine_sim_data/" "Screenshot_2017-10-12 15.40.44_flaFhT.png" "bill.xlsx" ".dropbox.cache/" "application/" "ngs/" "linux/" ".dropbox" "presentations/" "safety-cert/" "library.bib" "CS1010X/" "phd_tuition_fee/" "PHD/" "ScannerPro/" "latex/" "Applied computational genomics/" "cv2/" "Icon
+" "tuition/" "img_2604.jpg" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/Dropbox/PHD/" (23053 23705 306616 892000) "~$search Progress Report for AY1718 Sem2.docx" "QE/" "TAC Nomination Form_Nov2015.pdf" "Research Progress Report for AY15.docx" "PhDModuleClusterAnnex_24Nov2014.pdf" "thesis/" "Data Verbalization Project/" "progress_report AY1617Sem1/" "CS2104/" "Research Progress Report for AY1617 Sem1.docx" "CS6220/" "Research Progress Report for AY1516 Sem2.docx" "ST5225/" "Research Progress Report for AY15.pdf" "CS5228/" "phd_supervisor_writeup.docx" "phd_supervisor_writeup.pdf" "Research Progress Report for AY1718 Sem2.docx" "QE_old/" "CS4243/" "qe.org~" ".DS_Store" "CS5233/" "CS6222/" "Research Progress Report for AY1718 Sem2.pdf" "../" "./")
+
+ ("/Users/mayuan/Dropbox/PHD/thesis/2_mm/" (21315 64501 0 0) "../" "./")
+
+ ("/Users/mayuan/.emacs.d/elpa/" (23004 15443 0 0) "yasnippet-20160801.1142/" "yasnippet-0.8.0/" "websocket-20161113.1736/" "web-server-20140905.1706/" "uuidgen-20140918.1601/" "undo-tree-0.6.3/" "tuareg-2.0.8/" "snakemake-mode-20160612.2126/" "scala-mode-20160813.304/" "sbt-mode-20160816.1353/" "s-20160711.525/" "s-1.6.1/" "rainbow-delimiters-1.3.4/" "project-mode-1.0/" "popup-20160709.729/" "popup-0.5/" "org-20171009/" "org/" "nrepl-0.1.7/" "minimap-1.2/" "markdown-preview-mode-20161211.1443/" "markdown-mode-20170526.1213/" "markdown-mode+-20170320.1404/" "magit-popup-20160606.1041/" "load-theme-buffer-local-0.0.2/" "levenshtein-1.0/" "htmlize-1.39/" "helm-systemd-readme.txt" "helm-swoop-20160619.953/" "helm-core-20170403.957/" "helm-20170406.859/" "haskell-mode-20161020.2211/" "groovy-mode-201203310931/" "gnupg/" "ghc-20160808.813/" "ghc-1.10.2/" "flymake-0.4.16/" "ensime-20160820.1242/" "ediprolog-1.1.signed" "ediprolog-1.1/" "dash-20160619.611/" "dash-1.4.0/" "company-20160730.1516/" "color-theme-wombat+-0.0.2/" "color-theme-solarized-20120301/" "color-theme-sanityinc-solarized-2.25/" "color-theme-6.6.1/" "clojurescript-mode-0.5/" "clojure-test-mode-2.1.0/" "clojure-project-mode-1.0/" "clojure-mode-2.1.0/" "cljsbuild-mode-0.2.0/" "cljdoc-0.1.0/" "clj-refactor-0.2.0/" "clj-mode-0.9/" "caml-20151009.845/" "auto-complete-1.4/" "async-20160513.128/" "archives/" "anything-match-plugin-1.27/" "anything-1.287/" "ac-nrepl-0.20/" "0blayout-readme.txt" "../" "./")
+
+ ("/Users/mayuan/.emacs.d/elpa/org-20171009/" (23004 15456 0 0) "README_ELPA" "ox.elc" "ox.el" "ox-texinfo.elc" "ox-texinfo.el" "ox-publish.elc" "ox-publish.el" "ox-org.elc" "ox-org.el" "ox-odt.elc" "ox-odt.el" "ox-md.elc" "ox-md.el" "ox-man.elc" "ox-man.el" "ox-latex.elc" "ox-latex.el" "ox-icalendar.elc" "ox-icalendar.el" "ox-html.elc" "ox-html.el" "ox-beamer.elc" "ox-beamer.el" "ox-ascii.elc" "ox-ascii.el" "orgcard.pdf" "org.elc" "org.el" "org-w3m.elc" "org-w3m.el" "org-version.el" "org-timer.elc" "org-timer.el" "org-table.elc" "org-table.el" "org-src.elc" "org-src.el" "org-rmail.elc" "org-rmail.el" "org-protocol.elc" "org-protocol.el" "org-plot.elc" "org-plot.el" "org-pkg.elc" "org-pkg.el" "org-pcomplete.elc" "org-pcomplete.el" "org-mouse.elc" "org-mouse.el" "org-mobile.elc" "org-mobile.el" "org-mhe.elc" "org-mhe.el" "org-macs.elc" "org-macs.el" "org-macro.elc" "org-macro.el" "org-loaddefs.el" "org-list.elc" "org-list.el" "org-lint.elc" "org-lint.el" "org-irc.elc" "org-irc.el" "org-install.el" "org-inlinetask.elc" "org-inlinetask.el" "org-info.elc" "org-info.el" "org-indent.elc" "org-indent.el" "org-id.elc" "org-id.el" "org-habit.elc" "org-habit.el" "org-gnus.elc" "org-gnus.el" "org-footnote.elc" "org-footnote.el" "org-feed.elc" "org-feed.el" "org-faces.elc" "org-faces.el" "org-eww.elc" "org-eww.el" "org-eshell.elc" "org-eshell.el" "org-entities.elc" "org-entities.el" "org-element.elc" "org-element.el" "org-duration.elc" "org-duration.el" "org-docview.elc" "org-docview.el" "org-datetree.elc" "org-datetree.el" "org-ctags.elc" "org-ctags.el" "org-crypt.elc" "org-crypt.el" "org-compat.elc" "org-compat.el" "org-colview.elc" "org-colview.el" "org-clock.elc" "org-clock.el" "org-capture.elc" "org-capture.el" "org-bibtex.elc" "org-bibtex.el" "org-bbdb.elc" "org-bbdb.el" "org-autoloads.el" "org-attach.el" "org-archive.elc" "org-archive.el" "org-agenda.elc" "org-agenda.el" "org" "ob.elc" "ob.el" "ob-vala.elc" "ob-vala.el" "ob-tangle.elc" "ob-tangle.el" "ob-table.elc" "ob-table.el" "ob-stan.elc" "ob-stan.el" "ob-sqlite.elc" "ob-sqlite.el" "ob-sql.elc" "ob-sql.el" "ob-shen.elc" "ob-shen.el" "ob-shell.elc" "ob-shell.el" "ob-sed.elc" "ob-sed.el" "ob-screen.elc" "ob-screen.el" "ob-scheme.elc" "ob-scheme.el" "ob-sass.elc" "ob-sass.el" "ob-ruby.elc" "ob-ruby.el" "ob-ref.elc" "ob-ref.el" "ob-R.elc" "ob-R.el" "ob-python.elc" "ob-python.el" "ob-processing.elc" "ob-processing.el" "ob-plantuml.elc" "ob-plantuml.el" "ob-picolisp.elc" "ob-picolisp.el" "ob-perl.elc" "ob-perl.el" "ob-org.elc" "ob-org.el" "ob-octave.elc" "ob-octave.el" "ob-ocaml.elc" "ob-ocaml.el" "ob-mscgen.elc" "ob-mscgen.el" "ob-maxima.elc" "ob-maxima.el" "ob-matlab.elc" "ob-matlab.el" "ob-makefile.elc" "ob-makefile.el" "ob-lua.elc" "ob-lua.el" "ob-lob.elc" "ob-lob.el" "ob-lisp.elc" "ob-lisp.el" "ob-lilypond.elc" "ob-lilypond.el" "ob-ledger.elc" "ob-ledger.el" "ob-latex.elc" "ob-latex.el" "ob-keys.elc" "ob-keys.el" "ob-js.elc" "ob-js.el" "ob-java.elc" "ob-java.el" "ob-J.elc" "ob-J.el" "ob-io.elc" "ob-io.el" "ob-hledger.elc" "ob-hledger.el" "ob-haskell.elc" "ob-haskell.el" "ob-groovy.elc" "ob-groovy.el" "ob-gnuplot.elc" "ob-gnuplot.el" "ob-fortran.elc" "ob-fortran.el" "ob-forth.elc" "ob-forth.el" "ob-exp.elc" "ob-exp.el" "ob-eval.elc" "ob-eval.el" "ob-emacs-lisp.elc" "ob-emacs-lisp.el" "ob-ebnf.elc" "ob-ebnf.el" "ob-dot.elc" "ob-dot.el" "ob-ditaa.elc" "ob-ditaa.el" "ob-css.elc" "ob-css.el" "ob-core.elc" "ob-core.el" "ob-coq.elc" "ob-coq.el" "ob-comint.elc" "ob-comint.el" "ob-clojure.elc" "ob-clojure.el" "ob-calc.elc" "ob-calc.el" "ob-C.elc" "ob-C.el" "ob-awk.elc" "ob-awk.el" "ob-asymptote.elc" "ob-asymptote.el" "ob-abc.elc" "ob-abc.el" "etc/" "dir" "COPYING" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/" (22876 32191 0 0) "output_cdiff/" "mdsine/" "BEEM_MDSINE/" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/Programs/git-repos/transfer_nanopore_data/" (22930 35681 0 0) "test_appjar.py~" "monitor_and_move.py~" "minion_live_basecall/" "cmd.sh~" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/Programs/git-repos/transfer_nanopore_data/minion_live_basecall/" (22930 36926 0 0) "run_albacore.sh" "README.md" "nanopore_watchdog.py" ".git/" "../" "./")
+
+ ("/Users/mayuan/Programs/git-repos/poreduck/" (22878 1071 0 0) "transfer_fast5_to_server.py" "transfer_fast5_to_external_hd.py" "README.md" "move_fast5_to_subfolders.py" "images/" "albacore_server_scaled.py" ".idea/" ".git/" "../" "./")
+
+ ("/Users/mayuan/Dropbox/latex/orgtemplate/" (22821 18493 0 0) "thesis-settings.tex" "thesis-settings.aux" "Rplots.pdf" "nusthesis.sty" "master.tex~" "master.tex" "master.pdf" "master.org" "master.nlo" "master.lot" "master.lof" "master.fls" "master.fdb_latexmk" "master.blg" "master.bbl" "latex/" "fig1.pdf" "_minted-master/" "8_backmatters/" "7_/" "6_/" "5_conclusion/" "4_discussion/" "3_results/" "2_mm/" "1_intro/" "0_frontmatter/" ".fig1.pdf" ".DS_Store" "#master.tex#" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/BEEM_MDSINE/data_cdiff/" (22812 8456 0 0) "run_wrapper.m~" "run_wrapper.m" "parameters.f5.cfg~" "parameters.f5.cfg" "parameters.f4.cfg~" "parameters.f4.cfg" "parameters.f3.cfg~" "parameters.f3.cfg" "parameters.f2.cfg~" "parameters.f2.cfg" "parameters.f1.cfg~" "parameters.f1.cfg" "parameters.cfg~" "parameters.cfg" "output_cdiff_f5/" "output_cdiff_f4/" "output_cdiff_f3/" "output_cdiff_f2/" "output_cdiff_f1/" "metadata.txt~" "metadata.txt" "metadata.f5.txt" "metadata.f4.txt~" "metadata.f4.txt" "metadata.f3.txt~" "metadata.f3.txt" "metadata.f2.txt" "metadata.f1.txt~" "metadata.f1.txt" "cv_biomass_fold_5.txt~" "cv_biomass_fold_5.txt" "cv_biomass_fold_4.txt~" "cv_biomass_fold_4.txt" "cv_biomass_fold_3.txt~" "cv_biomass_fold_3.txt" "cv_biomass_fold_2.txt~" "cv_biomass_fold_2.txt" "cv_biomass_fold_1.txt~" "cv_biomass_fold_1.txt" "cv_biomass_fold_0.txt" "counts.txt.t~" "counts.txt.t" "counts.txt" "counts.f5.txt" "counts.f4.txt" "counts.f3.txt" "counts.f2.txt" "counts.f1.txt" "biomass.txt" "5.BVS.results.parameters.txt" "4.BVS.results.parameters.txt" "3.BVS.results.parameters.txt" "2.BVS.results.parameters.txt" "1.BVS.results.parameters.txt" "0.BVS.results.parameters.txt" "../" "./")
+
+ ("/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/Python_scripts/Lasso_Compositional/src/" (22829 16310 0 0) "cd_fast_compositional_data.pyx" "cd_fast_compositional_data.c" "cd_fast_annotated.pyx" "cd_fast.pyx" "cblas/" "../" "./")
+
+ ("/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/Python_scripts/Lasso_Compositional/" (22829 16304 0 0) "src/" "setup.py" "compositional_lasso_cv.py" "build/" "../" "./")
+
+ ("/Users/mayuan/Dropbox/gis/Microbial recovery machine learning/" (22827 61757 0 0) "SWEDEN_R_NR_FILTERED_PRE_NEW.txt" "SINGAPORE_R_NR_FILTERED_EARLY_NEW.txt" "scripts/" "regression_classification.r" "Python_scripts/" "Papers/" "Icon
+" "ggplot_theme.r" "ENGLAND_R_NR_FILTERED_PRE_NEW.txt" "CANADA_R_NR_FILTERED_PRE_NEW.txt" "2017_04_03.odp" ".Rhistory" ".DS_Store" ".dropbox" "../" "./")
+
+ ("/Users/mayuan/Dropbox/gis/" (22826 44520 0 0) "TTSH/" "Transfer2ZDrive.bat" "t2d_new/" "t2d/" "SkinMicrobiome/" "skin_int/" "Sigma/" "Projects ideas/" "parseq/" "paper_intergrative/" "Minter/" "Microbiome/" "Microbial recovery machine learning/" "Metadata/" "Metabolic modeling of species interaction in the human microbiome elucidates community-level assembly rules.pdf" "manuscripts/" "Malassezia report/" "lichenhao_report/" "labnotes.org" "labnotes/" "INCSeq2/" "INCSeq/" "IHMC/" "grant_fig.pptx" "germs_paperSM.pdf" "germs_06122015_lichenhao.pptx" "germ1_paper.pdf" "Genomic characterization of three unique Dehalococcoides that respire on persistent polychlorinated biphenyls.pdf" "data_modeling/" "CSB5/" "csb journal club 05_01_2016/" "conflict-labnotes.org" "bac/" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/Documents/test/" (22829 17315 0 0) "test.so" "src/" "setup.py~" "setup.py" "compositional_lasso_cv.py" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/BEEM_MDSINE/" (22810 47815 0 0) "data_cdiff/" "cv_nobiomass/" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/BEEM_MDSINE/cv_nobiomass/" (22811 60442 0 0) "run_wrapper.m" "parameters.cfg~" "parameters.cfg" "metadata.txt~" "metadata.txt" "input.mat" "counts.txt" "BVS.mat" "biomass.txt" "5.noBiomass.bvs" "4.noBiomass.bvs" "3.noBiomass.bvs" "2.noBiomass.bvs" "1.noBiomass.bvs" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/mdsine/data_cdiff/" (22803 62154 0 0) "parameters.cfg" "metadata.txt" "crossvalidation_parameters.cfg" "counts.txt" "biomass.txt" "_biomass.txt" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/mdsine/bayesian_inference/" (22800 7372 0 0) "truncGaussianSample.m" "splineCountsMCMC.m" "splineBiomassMCMC.m" "script_numIntTraj_cdiff.m" "sample_inverse_gaussian.m" "reformatBiomassData.m" "readParameterFile.m" "preProcessData.m" "NBlogLikErr2.m" "MDSINESelectMCMC.m" "MDSINELassoMCMC.m" "LogBiomass_GetStd.m" "inv_chol.m" "GetBiomassStd.m" "filterData.m" "example_AnalyzeHondaData.m" "example_AnalyzeCDiffData.m" "estOTUTrajDerivFromSplineSamples.m" "estMatricesHyperparametersFDiff.m" "estMatricesHyperparameters.m" "estInteractMatrixFromSamples.m" "estForwardDiffDeriv.m" "estBiomassFromSplineSamples.m" "doBayesianSelect.m" "doBayesianLasso.m" "doBayesianInference.m" "condMVN.m" "calcNorms.m" "avgBiomass.m" "../" "./")
+
+ ("/Users/mayuan/Documents/MDSINE/mdsine/" (22800 7743 0 0) "utilities/" "simulation/" "run_wrapper.m" "run_diet_crossvalidation.m" "run_cdiff_crossvalidation.m" "ridge_regression/" "README.md" "post_processing.m" "post_processing/" "output_diet/" "output_cdiff/" "mdsine.prj" "mdsine.m" "mdsine/" "linear_stability/" "license.txt" "infer_ridge.m" "infer_bayesian_selection.m" "infer_bayesian_lasso.m" "import_data/" "doc/" "data_diet/" "data_cdiff/" "calc_simulation.m" "calc_linear_stability.m" "benchmarking_crossvalidation/" "bayesian_inference/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/mayuan/Dropbox/latex/" (22799 65452 0 0) "thesistemplate.zip" "thesistemplate/" "orgtemplate/" "nusthesis.sty" "nus_logo.png" "lichenhao.sty" "gtuckerkellogg.sty" "gtk.org" "gtk.el" "baposter.tar.bz2" ".DS_Store" "../" "./")
+
+ ("/Users/mayuan/.emacs.d/mypackages/ESS/" (22799 54932 0 0) "VERSION" "test/" "rsn.txt" "RPM.spec.in" "RPM.spec" "README.md" "README" "OONEWS" "ONEWS" "NEWS" "mkinstalldirs" "Makefile" "Makeconf" "lisp/" "LDA/" "install-sh" "fontlock-test/" "etc/" "ess-autoloads.el" "doc/" "debian/" "COPYING" "ChangeLog" "ANNOUNCE" "../" "./")
+
+ ("/Users/mayuan/.emacs.d/mypackages/" (22799 54067 0 0) "python-mode.el-6.1.3/" "perl-completion.elc" "perl-completion.el" "paredit.el" "nxhtml/" "highlight-indentation.el" "essh.elc" "essh.el" "ESS/" "../" "./")
+
  ("/home/lichenhao/.emacs.d/" (22759 23779 512346 276000) "README.md" ".git/" "./" ".gitignore" "templates/" "tramp" "ido.last~" "abbrev_defs" "mypackages/" "_emacs23_init.el" "network-security.data" "ensime/" ".Rhistory" "auto-save-list/" ".org-id-locations" "additionalsettings.org" "ido.last" "session.10b638bed02bdeb285147088197323481000000017110054" "snippets/" "init.el" "../" "elpa/" "ac-comphist.dat")
 
  ("/home/lichenhao/Downloads/" (22759 21367 23584 897000) "mygraph.svg" "wgEncodeDacMapabilityConsensusExcludable.bed.gz" "Assignment1.zip" "all_results (2).csv" "test.pem" "RFP-lichenhao.pdf" "ztd1411101127226887a756.doc" "12-advanced-ocaml.pdf" "Exercise 8.10.pdf" "RDMP.SoCver1.student.Dec2014.doc" "postdoc_Weiwei_15_recruitment_China (1).doc" "churchill/" "test2.pem" "Document Submission Form 2013 (green).docx" "emacs-25.1.tar.gz" "equation.png" "scala-2.11.8.tgz" "Staphylococcus epidermidis in Human Skin Microbiome associated with Acne A Cause of Disease or Defence.pdf" "postdoc-booklet.docx" "Poster___FEMS_2015 (1).pdf" "OLSVis-export-20150423-124611.txt" "Paramecium_competition.r" "quiz-3.pdf" "Report.pdf" "Exercise 7.5.pdf" "igraph-0.7.1.tar.gz" "AGG-57215-metagenomics--shedding-light-on-the-gut-microbiome_012915.pdf" "GASiC_SeqAn.pptx" "quiz-16-soln.txt" "journal.pcbi.1002687.s010.PDF" "eclipse/" "srca12306/" "journal.pcbi.1002606.g001.png" "request-for-payment-form(RFP) - 2 Jan 2015.pdf" "ztd1411101127226887a756 (1).doc" "fujimoto.ppt" "QE-NET (1).xlsx" "assignments.zip" "ess-16.04.tgz" "class17.ppt" "MGLM/" "data(9).xlsx" "CovarianceApplications.ppt" "工作簿1.xlsx" "You_Exec_-_Spectrum_-_Dark_-_16x9_-_Deck_A.pptx" "couchbase-server-community_4.5.0-ubuntu14.04_amd64.deb" "13059_2016_988_MOESM18_ESM.csv" "What is submodel processing.doc" "cs5228_intro_dm_1.pdf" "pfsnet_code.zip" "ch02-mapreduce_new.pdf" "syn1_truth.bed" "Lab1.scala" "emacs-25.1/" "wps-office_9.1.0.4975-a19p1_amd64.deb" "ViewPageProof_YMETH_3924 (1).pdf" "10.1371-journal.pcbi.1003706.s020.XLSX" "LSM4255_lab_Week_6.r" "fastdtw-0.2.0.tar.gz" "GIGA-S-16-00028.pdf" "tut11stack.cmi" "1.1-release/" "A0078036A_lichenhao_Searching and Mining Tree Structures.docx" "Lhander10/" "XX-Net-3.2.8/" "journal.pcbi.1002606.g002.png" "iSax2Family-SourceCode-Csharp.zip" "EC.doc" "code (1).tgz" "CS4232 Exercise 4.7.pdf" "Cytoscape_3_2_1_unix.sh" "demo_abundance_matrix.txt.gz" "eAppointment.pdf" "alpha_train.lab.bz2" "ess-16.04/" "node-v4.1.0-linux-x64.tar.gz" "10.1371-journal.pcbi.1003706.s006.PDF" "matlab_R2016a_glnxa64.zip" "wgEncodeDukeMapabilityRegionsExcludable.bed.gz" "igraph-0.7.1.zip" "svmlin-v1.0.zip" "lichenhao_TravelPlan.pdf" "advcomp_2012_5_30_20096 (1).pdf" "nature11450-s2.xls" "kobas2.0-20150126.tar.gz" "Beijing_Panlu30Apr-2May.pdf" "WebinUploader.jnlp" "CS4243_Slides_PatternRecognition.pdf" "Topk_CS541 (1).ppt" "ThesisDefense_XiaoliWang.ppt" "Decay.doc" "svmlin-v1.0/" "05474152.pdf" "GASiC_SeqAn (1).pptx" "nsegata-lefse-2a63b3206e05.zip" "sumtime-meteo.zip" "Manual(1).pdf" "北京金沐医疗科技有限公司介绍.doc" "Visa Letters.Li C.pdf" "all_results (1).csv" "mdsine_installer_linux_v1.2.install" "book/" "nature12198-s2 (2).xlsx" "FANN-2.2.0-Source/" "mendeleydesktop_1.13.3-stable_amd64.deb" "lecture6.pdf" "10.1371-journal.pcbi.1003706.s013.XLSX" "rigraph-release-0.7.zip" "Normal.scale10K_filter-c1-s0.5.pdf" "journal.pcbi.1002358.g001.png" "shiny_server.pem" "graphmap/" "Supplementary_Software_canopy_clustering.zip" "R2016a_glnxa64.iso" "nmicrobiol2016106.pdf" "ALL.scale10K_filter-c1-s0.5.pdf" "ViewPageProof_YMETH_3924.pdf" "生物信息高级研发负责人(1).docx" "nature12198-s2 (3).xlsx" "license.lic" "tut11stack.ml" "teamviewer_11.0.57095_i386.deb" "sam2fasta.py" "Cheng Yu's CV.pdf" "scala-SDK-4.4.1-vfinal-2.11-linux.gtk.x86_64.tar.gz" "DTW_SVM_data.csv" "鍏徃浜у搧鐩綍鏉庨槼.doc" "05767958.pdf" "ch1.pdf" "randomly choose sample.zip" "Assignment 2 Report.docx" "journal.pcbi.1002687.s010 (1).PDF" "churchill-1.8.tar.gz" "BiomeNet.zip" "msorm_slides.ppt" "AD.scale10K_filter-c1-s0.5.pdf" "quiz-16-soln (1).txt" "Ad for computational ROv3-1.pdf" "ArenaModels/" "syn1-2016-03-20.zip" "OCCurves[1].ppt" "Jul.ASTAR (with iPhone) (1).pdf" "Lecture03A.pdf" "PyWavelets-0.3.0/" "Poster___FEMS_2015.pdf" "Lab1 (1).scala" "10.1371-journal.pcbi.1003706.s006 (1).PDF" "lichenhao_cv.pdf" "NOA-IIT_OB2520160614010235UL0.pdf" "pdss 12 (Lookahead, Deadlock).ppt" "nature12198-s2.xlsx" "201402101029-Li_lrv.mp4" "IMB香港公司介绍.doc" "10.1371-journal.pcbi.1003706.s012.XLSX" "qns3vm.zip" "zoom_amd64.deb" "Seminar Announcement Google Genomics.pdf" "nature12198-s2 (1).xlsx" "tut1.scala" "Arjun_Sushruth_fagin_ta.ppt" "berrysethi.pdf" "iSAX_DTW.ppt" "dtw-1.0 (1).tar.gz" "Ad for computational ROv3-1 (1).pdf" "srca12306.zip" "#quiz-16-soln (1).txt#" "templatemo_441_volton/" "img_2604.jpg" "27881.rtf" "pSession1-2.ppt" "167249.pdf" "45959685_20161115_0027.pdf" "NUS Faculty of Science Alumni Profile_2016_.docx" "Data and text mining applied to.pdf" "Topk_CS541.ppt" "SwitchyOmega.crx" "apors_slides_handouts.ps" "LSM 4255 Week 10 final.pptx" "What projects to work on_new.pptx" "jdk-8u25-linux-x64.tar.gz" "Assignment1/" "mdsine_installer_linux_v1.3.install" "errors-in-numerical-differentiation.doc" "dtw-1.0.tar.gz" "YMETH_3924_edit_report.pdf" "ASTAR-P&G Press Release on Malassezia Sequencing [EMBARGOED UNTIL 6 NOV].docx" "lichenhao_abstracts.pdf" "ubuntu-tweak_0.8.7-1~trusty2_all.deb" "matlab_R2016a_glnxa64/" "win.zip" "WebinUploader (1).jnlp" "eigenstrat.pdf" "PyWavelets-0.3.0.tar.gz" "Tutorial_Wavelet for Pattern Recognition.pdf" "win/" "ch04-streams1_new.pdf" "01-intro.pdf" "dtw-1.0/" "10.1371-journal.pcbi.1003706.s007.PDF" "download.png" "ch01-intro_new.pdf" "srep21746.pdf" "Jul.ASTAR (with iPhone).pdf" "instruction.txt" "2015.xls" "johanneskoester-snakemake-84691f218a1c.zip" "syn2-2016-03-20.zip" "Instructions to authors on how to submit to EVISE.pdf" "My NUSMods.com Timetable.pdf" "sample2015.pdf" "athena-jot-9.0-3.src.rpm" "wgEncodeCrgMapabilityAlign100mer.bigWig" "dgw-0.1.0.tar.gz" "CS6220_presentation_group1.pdf" "MEDUSA.zip" "A0078036A_lichenhao_Searching and Mining Graphs.docx" "pcbi.1003918.s001.pdf" "cs6220_1.ppt" "interactiveDisplay_1.4.1.tar.gz" "NUS Faculty of Science Alumni Profile_2016_ (1).docx" "Re%3a_pfsnet_code.zip" "RFP-lichenhao (2).pdf" "practice.csv" "Test_Praveen_Nov15.docx" "lichenhao_ResearchPlan.pdf" "templatemo_441_volton.zip" "gephi-0.8.2-beta.tar.gz" "data(9).xls" "pcbi.1003918.s005.pdf" "tut7sol.pl" "RFP-lichenhao (1).pdf" "iSax2Family-SourceCode-Csharp (1).zip" "practice.xlsx" "45959685_20151015_0014.pdf" "Miniconda-latest-Linux-x86_64.sh" "Manual.pdf" "My NUSMods.com Timetable (1).pdf" "IMG_0036.m4v" "important-extrema.ppt" "nbt.2942-S2.xlsx" "ubuntu-latex-fonts/" "Lhander 1.0 Free Website Template - Free-CSS.com.zip" "XX-Net-3.2.8.zip" "MGLM_toolbox_0.0.1.zip" "thm03 - rTtee p2_1.ppt" "FANN-2.2.0-Source.zip" "10-Haskell.pdf" "lch14forever.github.io/" "工作簿2.xlsx" "jre-7u71-linux-i586.tar.gz" "for Li Chenhao/" "postdoc_Weiwei_15_recruitment_China.doc" "rtree1.ppt" "RichTextEditorImageDownload.docx" "45959685_20150314_0007.pdf" "st01.docx" "1-s2.0-009286747790280X-main.pdf" "RO_Weiwei_15_recruitment_GIS_version.pdf" "release-v1.0.3.zip" "PEMS-SF.zip" "Human Sequenced Data-Info_MUX2343_2449_2562.xlsx" "advcomp_2012_5_30_20096.pdf" "ViewPageProof_YMETH_3924 (2).pdf" "tut11stack.ml~" "a.out" "growthcurves.pdf" "1516SEM1-CS2104(Sec B).pdf" "CurlerExcutable.zip" "EDDA_1.5.3.tar.gz" "week01.pdf" "Performance Management Appraisal - Beta.docx" "PyWavelets-0.3.0.tar.gz.asc" "3DAround_NBT-DEV-IOS-PROD--DDD_Around-Pull-Modified_v1.0.9.292_8609e6db.ipa" "lect9.ppt" "nmicrobiol2016160.pdf" "Li Chenhao.pdf" "SraRunTable.txt" "../" "./")
@@ -216,38 +314,6 @@
  ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/ensemble/" (21923 37535 315785 344000) "cclasso_rebacca/" "merged_ccrepe.s_mint.tsv" "ccrepe.p_ccrepe.s_cclasso_rebacca/" "benchmark_eval_box.r" "cclasso_mint/" "merged_ccrepe.p_ccrepe.s.tsv" "ccrepe.p_ccrepe.s/" "merged_cclasso_rebacca.tsv" "majority_vote/" "ccrepe.s_cclasso/" "merged_ccrepe.p_ccrepe.s_cclasso_rebacca.tsv" "ccrepe.p_mint/" "ccrepe.p_rebacca/" "ccrepe.s_mint/" "merged_ccrepe.p_mint.tsv" "cmd" "merged_ccrepe.s_cclasso.tsv" "merged_ccrepe.s_rebacca.tsv" "ccrepe.s_rebacca/" "merged_ccrepe.p_cclasso.tsv" "benchmark_eval_box.r~" "ccrepe.p_cclasso/" "merged_ccrepe.p_rebacca.tsv" "merged_mint_rebacca.tsv" "merged_cclasso_mint.tsv" "merged_majority_vote.tsv" "mint_rebacca/" "../" "./")
 
  ("/mnt/projects/lich/dream_challenge/interaction/medusa_int/5sparcc/" (21924 25192 892600 586000) "out/" "sparcc_permutation_cor.sh" "sparcc_permutation_cor.sh~" "tmp/" "../" "./")
-
- ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/paper/ensemble/majority_vote/" (21923 36636 938439 330000) "r_23.majorityVote.eval.csv" "r_38.majorityVote.eval.csv" "r_80.majorityVote.eval.csv" "r_92.majorityVote.eval.csv" "r_53.majorityVote.eval.csv" "r_12.majorityVote.eval.csv" "r_31.majorityVote.eval.csv" "r_19.majorityVote.eval.csv" "r_32.majorityVote.eval.csv" "r_45.majorityVote.eval.csv" "r_24.majorityVote.eval.csv" "r_84.majorityVote.eval.csv" "r_39.majorityVote.eval.csv" "r_28.majorityVote.eval.csv" "r_22.majorityVote.eval.csv" "r_58.majorityVote.eval.csv" "r_65.majorityVote.eval.csv" "r_42.majorityVote.eval.csv" "r_88.majorityVote.eval.csv" "r_30.majorityVote.eval.csv" "r_60.majorityVote.eval.csv" "r_87.majorityVote.eval.csv" "r_94.majorityVote.eval.csv" "r_27.majorityVote.eval.csv" "r_89.majorityVote.eval.csv" "r_76.majorityVote.eval.csv" "r_49.majorityVote.eval.csv" "r_40.majorityVote.eval.csv" "r_9.majorityVote.eval.csv" "r_55.majorityVote.eval.csv" "r_64.majorityVote.eval.csv" "r_85.majorityVote.eval.csv" "r_59.majorityVote.eval.csv" "r_86.majorityVote.eval.csv" "r_43.majorityVote.eval.csv" "r_57.majorityVote.eval.csv" "r_78.majorityVote.eval.csv" "r_93.majorityVote.eval.csv" "r_56.majorityVote.eval.csv" "r_46.majorityVote.eval.csv" "r_13.majorityVote.eval.csv" "r_10.majorityVote.eval.csv" "r_100.majorityVote.eval.csv" "r_26.majorityVote.eval.csv" "r_74.majorityVote.eval.csv" "r_34.majorityVote.eval.csv" "r_61.majorityVote.eval.csv" "r_21.majorityVote.eval.csv" "r_69.majorityVote.eval.csv" "r_3.majorityVote.eval.csv" "r_71.majorityVote.eval.csv" "majority_vote.r" "r_81.majorityVote.eval.csv" "r_1.majorityVote.eval.csv" "r_97.majorityVote.eval.csv" "r_35.majorityVote.eval.csv" "r_77.majorityVote.eval.csv" "r_96.majorityVote.eval.csv" "r_98.majorityVote.eval.csv" "r_66.majorityVote.eval.csv" "r_75.majorityVote.eval.csv" "r_11.majorityVote.eval.csv" "r_51.majorityVote.eval.csv" "r_48.majorityVote.eval.csv" "r_41.majorityVote.eval.csv" "r_18.majorityVote.eval.csv" "r_52.majorityVote.eval.csv" "r_82.majorityVote.eval.csv" "r_63.majorityVote.eval.csv" "majority_vote.r~" "r_36.majorityVote.eval.csv" "r_62.majorityVote.eval.csv" "r_83.majorityVote.eval.csv" "r_15.majorityVote.eval.csv" "r_37.majorityVote.eval.csv" "r_33.majorityVote.eval.csv" "r_72.majorityVote.eval.csv" "r_7.majorityVote.eval.csv" "r_73.majorityVote.eval.csv" "r_17.majorityVote.eval.csv" "r_2.majorityVote.eval.csv" "r_16.majorityVote.eval.csv" "r_99.majorityVote.eval.csv" "r_68.majorityVote.eval.csv" "r_25.majorityVote.eval.csv" "r_91.majorityVote.eval.csv" "r_47.majorityVote.eval.csv" "r_20.majorityVote.eval.csv" "r_67.majorityVote.eval.csv" "r_29.majorityVote.eval.csv" "r_6.majorityVote.eval.csv" "r_44.majorityVote.eval.csv" "r_70.majorityVote.eval.csv" "r_5.majorityVote.eval.csv" "r_4.majorityVote.eval.csv" "r_79.majorityVote.eval.csv" "r_54.majorityVote.eval.csv" "r_90.majorityVote.eval.csv" "r_50.majorityVote.eval.csv" "r_95.majorityVote.eval.csv" "r_8.majorityVote.eval.csv" "r_14.majorityVote.eval.csv" "../" "./")
-
- ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/4CCLasso/" (21906 12407 46949 415000) ".Rhistory" "cclasso.r~" "cclasso.r" "cclasso.R" "../" "./")
-
- ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/simulations/scripts/" (21907 35039 841939 789000) "4MInt.r" "cclasso.lib.R" ".Rhistory" "#eval2mat.r#" "2ccrepe.r~" "3cclasso.r" "eval2mat.r" "sparcc_permutation_cor.sh" "#1corr.r#" "3cclasso.r~" "0true_int.r" "eval2mat.r~" "0gLVsimulation.r" "2ccrepe.r" "sparcc_permutation_cor.sh~" "1corr.r" "sources/" "0true_int.r~" "4MInt.r~" "../" "./")
-
- ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/simulations/5SPARCC/" (21907 19933 114636 747000) "sparcc.r" "out/" "dat_tsv/" ".#sparcc.r" "tmp/" "../" "./")
-
- ("/mnt/projects/lich/dream_challenge/interaction/gLV_simulations/simulations/" (21906 26293 238458 94000) "4MInt/" "3CCLASSO/" "1correlation/" "dat_list" "scripts/" "dat/" "5SPARCC/" "2CCREPE/" "simulated_20species_100samples_relative_abun_transposed_empty_design.tsv" "../" "./")
-
- ("/home/lich/projects_backup/base_seq/" (21905 11023 108617 557000) "run_pipeline_patient.sh" "report_seq.py~" "lch_base_scripts/" "run_pipeline_control.sh" "report_seq.py" "../" "./")
-
- ("/home/lich/projects_backup/" (21860 859 674425 247000) "base_seq/" "skinmicro/" "dream_challenge/" "../" "./")
-
- ("/mnt/projects/sunm/others/human3/" (21876 21347 22022 499000) "MUX2562/" "analysis/" "bowtie2_hg19_collapse_new1.e1036206" "analyze_maxFC2_tppothers_candida.R" "bowtie2_hg19_collapse_new1.o1036206" "analyze_from_tab1.R" "bowtie2_hg19_collapse_new1.sh" "hg19_transcriptome_collapse_spiked_rRNA.fa" "scripts/" "candidate_gene" "analyze_from_tab2.R" "incomplete/" "hg19_transcriptome_collapse_spiked_rRNA.fa.fai" "hg19_transcriptome_collapse_spiked_rRNA.bed" "candidate_gene.fa" "MUX2449/" "bowtie2_candida_UTRgenes_fastq3.sh" "MUX2343/" "../" "./")
-
- ("/mnt/projects/sunm/others/human3/analysis/" (21878 63162 471291 942000) "log.Coenzyme-B-12.o1275326" "log.Threonine.e1275316" "batch_MUX2449_MUX2562_merged.Glucose.eval10.Rdata" "log.Glucose.o1275317" "log.Coenzyme-B-12.e1275326" "MUX2562/" "batch_MUX2449_MUX2562_merged.Coenzyme-B-12.etTable" "bpipe.config" "batch_MUX2449_MUX2562_merged.Threonine.etTable" "log.SAM.e1275314" "Sample_label_batch2_MUX2449_MUX2562" "batch_MUX2449_MUX2562_merged.Leucine.eval10.Rdata" "batch_MUX2449_MUX2562_merged.matrix" "batch_MUX2449_MUX2562_merged.Coenzyme-B-12.eval10.Rdata" "batch_MUX2449_MUX2562_merged.Glucose-6-P.etTable" "batch_MUX2449_MUX2562_merged.SAM.maxFC2_output2.tsv" "candidate4validation/" "batch_MUX2449_MUX2562_merged.SAM.eval10.Rdata" "batch_MUX2449_MUX2562_merged.Glucose.etTable" "log.Glysine.o1275323" "batch_MUX2449_MUX2562_merged.Leucine.etTable" "batch_MUX2449_MUX2562_merged.Threonine.maxFC2_output2.tsv" "batch_MUX2449_MUX2562_merged.Coenzyme-B-12.maxFC2_output2.tsv" "batch_MUX2449_MUX2562_merged.SAM.etTable" "MUX2449/" "log.Glucose-6-P.e1462548" "log.Glucose-6-P.o1462548" "log.Threonine.o1275316" "batch_MUX2449_MUX2562_merged.Leucine.maxFC2_output2.tsv" "log.Leucine.o1275324" "batch_MUX2449_MUX2562_merged.Glysine.etTable" "log.Leucine.e1275324" "MUX2343/" ".bpipe/" "log.Glucose.e1275317" "batch_MUX2449_MUX2562_merged.Glucose.maxFC2_output2.tsv" "log.SAM.o1275314" "cov.sh" "batch_MUX2449_MUX2562_merged.Threonine.eval10.Rdata" "log.Glysine.e1275323" "../" "./")
-
- ("/mnt/projects/lich/hmp_data/medusa/metabolicnetwork/" (21864 14455 489879 903000) "medusa_EC_seeds_merged.csv" "seeds/" "ana_network.r~" "medusa_EC_seeds_count.tsv" "medusa_sample_info.tsv" "ana_network.r" "run_netSeed.pl" "NetSeedPerl/" "construct_network.sh~" "construct_network.sh" "Enzyme_count2network.py" "networks/" "BiomeNet/" "figures/" "../" "./")
-
- ("/mnt/projects/lich/" (21559 32314 904369 69000) "hmp_data/" "dream_challenge/" "../" "./")
-
- ("/mnt/projects/lich/hmp_data/" (21849 37003 621125 202000) "png/" "t2d_pathway/" "final/" "medusa/" "strain/" "additional_species/" "mala_final/" "filter/" "gene_names" "../" "./")
-
- ("/mnt/projects/lich/hmp_data/medusa/" (21864 1712 110738 820000) "annotationKEGG_raw_annotation2KEGG.py" "process_medusa" "biclustering/" ".Rhistory" "SpeciesCount.count.sorted.tsv" "concoct/" "CONCOCT/" "SpeciesCount.count" "mapping_tables/" "cor_SP_SP_neg.values.hist.r" "cor_SP_SP_neg.values" "library_assession_mapping/" "cor_SP_SP_all.values" "KO_Species/" "medusa_KO_count.tsv" "t2d_eu_cn_species/" "kegg_count2ec_count.py" "trash/" "CONCOCT_new/" "keggECparser.py" "SpeciesCount.count.mean_gt50" "raw/" "metabolicnetwork/" "select_col.py" "medusa_EC_count.tsv" "t2d_eu_cn/" "canopy/" "SpeciesCount.count.mean" "../" "./")
-
- ("/mnt/projects/sunm/others/human3/analysis/MUX2343/" (21859 5182 351865 655000) "tmp_longlist/" "bpipe.config" "log.bpipe.qsub.e1252573" "tmp_bt2/" "sample_label" "merged.matrix.TPP.etTable" "tmp_cutadapt_fastq/" "tmp_tabs/" "doc/" "merged.matrix" ".bpipe/" "commandlog.txt" "log.bpipe.qsub.o1252573" "../" "./")
-
- ("/home/lich/projects_backup/skinmicro/metaphlan/" (21832 10137 625365 164000) "merged_table_genus.csv" "combinedLR_fungi_abundance.csv" "bacteria_strep_sanguinisNcristatus_relative_abundances.png" "combinedLR_all_patient_abundance.csv" "bacteria_strep_relative_abundances.png" "all_patients/" "PCA.png" "bacteria_staph_relative_abundances.png" "PCA_heatmap_combinedLR_all_patient_abundance.r" "bacteria_genus_relative_abundances.png" "PCA_combinedLR_fungi_abundance.r" "../" "./")
-
- ("/home/lich/projects_backup/skinmicro/" (21832 10138 640762 876000) "malassezia/" "metaphlan/" "skin_sampling_method_comparison/" "readme" "pathoscope_mala_ana.ipynb" "metaphlan2/" ".ipynb_checkpoints/" "metaphlan_ana.ipynb" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
