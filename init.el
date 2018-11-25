@@ -1,4 +1,4 @@
-;;###############################General settings######################################
+ ;;###############################General settings######################################
 (add-to-list 'load-path "~/.emacs.d/mypackages/")
 (setq user-mail-address "lichenhao.sg@gmail.com"
       user-full-name "Li Chenhao")
@@ -9,7 +9,6 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-
 ;;#######################################Mini buffer###################################
 (ido-mode t)
 
@@ -39,7 +38,7 @@
  '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (pretty-mode pretty-mode-plus org-ref ox-gfm minimap markdown-mode+ markdown-preview-mode undo-tree tuareg snakemake-mode rainbow-delimiters org load-theme-buffer-local htmlize helm-swoop groovy-mode ghc flymake ensime ediprolog color-theme-wombat+ color-theme-solarized color-theme-sanityinc-solarized clojurescript-mode clojure-test-mode clojure-project-mode cljsbuild-mode cljdoc clj-refactor clj-mode anything-match-plugin anything ac-nrepl)))
+    (yasnippet-snippets auto-complete yasnippet phi-search multiple-cursors nim-mode pretty-mode pretty-mode-plus org-ref ox-gfm minimap markdown-mode+ markdown-preview-mode undo-tree tuareg snakemake-mode rainbow-delimiters org load-theme-buffer-local htmlize helm-swoop groovy-mode ghc flymake ensime ediprolog color-theme-wombat+ color-theme-solarized color-theme-sanityinc-solarized clojurescript-mode clojure-test-mode clojure-project-mode cljsbuild-mode cljdoc clj-refactor clj-mode anything-match-plugin anything ac-nrepl)))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
@@ -77,6 +76,19 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
 
+;;multi-cursor
+(require 'multiple-cursors)
+(global-set-key (kbd "C-c C-m") 'mc/edit-lines)
+(global-set-key (kbd "C-.") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-,") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-.") 'mc/mark-all-like-this)
+
+;;phi-search
+(require 'phi-replace)
+(global-set-key (kbd "C-s") 'phi-search)
+(global-set-key (kbd "C-r") 'phi-search-backward)
+(global-set-key (kbd "M-%") 'phi-replace-query)
+
 ;;color theme
 (require 'color-theme)
 (setq color-theme-is-global t)
@@ -95,7 +107,7 @@
 ;; (my-maximized)
 (set-face-attribute 'default nil :height 180)
 ;;line number
-(global-linum-mode 1)
+;;(global-linum-mode 1)
 (column-number-mode 1)
 ;;highlight the current line
 (global-hl-line-mode 1)
@@ -116,7 +128,7 @@
 
 ;;***************yasnippet********************
 (require 'yasnippet)
-;; (yas-global-mode 1)
+(yas-global-mode 1)
 (yas-reload-all)
 (add-hook 'c-mode-hook #'yas-minor-mode)
 
@@ -131,10 +143,13 @@
 ;;###################################Dired file system################################
 (setq wdired-allow-to-change-permissions t)
 
+;;###################################Tramp################################
+
 ;;###################################Programming languages################################
 
 ;;*****************General******************
 ;;auto complete
+(require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 ;;complete file path
@@ -158,6 +173,20 @@
 	 (eq 1 (point-max))
 	 (insert-file "~/.emacs.d/templates/template.rscript"))))
 
+;;******************Nim*********************
+(add-hook 'nim-mode-hook 'nimsuggest-mode)
+(add-hook 'nimsuggest-mode-hook 'company-mode)
+(add-hook 'nimsuggest-mode-hook 'flycheck-mode)
+
+;;****************** C *********************
+;; Run C programs directly from within emacs
+(require 'cc-mode)
+(defun execute-c-program ()
+  (interactive)
+  (defvar foo)
+  (setq foo (concat "gcc " (buffer-name) " && ./a.out" ))
+  (shell-command foo))
+(define-key c-mode-map (kbd "C-c C-c") 'execute-c-program)
 
 ;;******************Text********************
 ;; insert real "Tabs"
@@ -174,6 +203,16 @@
 (add-to-list 'auto-mode-alist '("\.rscript$" . R-mode))
 
 (define-key ess-mode-map (kbd "C->") (lambda () (interactive) (insert "%>%")))
+;; customised functions
+(defun spawn-ess-remote (login)
+  "connect to remote server and open ssh"
+  (interactive "sUser login (uname@server.ip): ")
+  (pop-to-buffer (get-buffer-create (generate-new-buffer-name "Remote-R")))
+  (shell (current-buffer))
+  (process-send-string nil (format"ssh -Y %s \n" login) )
+  (process-send-string nil "R\n")
+  (ess-remote nil "R"))
+(global-set-key (kbd "C-c C-r") 'spawn-ess-remote)
 
 ;;*******************Perl*******************
 ;;cperl
@@ -208,29 +247,6 @@
                      '(ac-source-perl-completion)))))
 
 ;;*********************Python*******************
-;; ;; python-mode
-;; (setq py-install-directory "~/.emacs.d/mypackages/python-mode")
-;; (add-to-list 'load-path py-install-directory)
-;; (require 'python-mode)
-;; (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-;; (add-to-list 'interpreter-mode-alist '("python2.7" . python-mode))
-;; (when (executable-find "ipython")
-;;     (setq org-babel-python-mode 'python-mode))
-;; ; use IPython
-;; (setq-default py-shell-name "ipython")
-;; (setq-default py-which-bufname "IPython")
-;; ; use the wx backend, for both mayavi and matplotlib
-;; (setq py-python-command-args
-;;   '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
-;;  (setq py-force-py-shell-name-p t)
-;; ; switch to the interpreter after executing code
-;; (setq py-shell-switch-buffers-on-execute-p t)
-;; (setq py-switch-buffers-on-execute-p nil)
-;; ; don't split windows
-;; (setq py-split-windows-on-execute-p t)
-;; ; try to automagically figure out indentation
-;; (setq py-smart-indentation t)
-
 (setq
  python-shell-interpreter "ipython"
  python-shell-interpreter-args ""
